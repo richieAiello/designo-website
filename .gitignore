@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.xd
+*.fig
+.DS_Store
+.prettierignore
