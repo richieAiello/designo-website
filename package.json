@@ -1,0 +1,30 @@
+{
+  "name": "designo-website",
+  "version": "1.0.0",
+  "description": "[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/designo-website.git"
+  },
+  "keywords": [],
+  "author": "Richard Aiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/designo-website/issues"
+  },
+  "homepage": "https://github.com/richieAiello/designo-website#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "process": "^0.11.10",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.52.1"
+  }
+}
