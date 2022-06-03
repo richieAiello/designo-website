@@ -20,6 +20,7 @@
   "homepage": "https://github.com/richieAiello/designo-website#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "parcel": "^2.6.0",
     "process": "^0.11.10",
     "react": "^18.1.0",

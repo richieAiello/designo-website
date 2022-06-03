@@ -13,7 +13,6 @@ import WebDesign from "./routes/WebDesign";
 export default function App() {
   return (
     <StrictMode>
-      <h1>Will always render!</h1>
       <BrowserRouter>
         <Nav />
         <Routes>
