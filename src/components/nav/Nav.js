@@ -1,15 +1,22 @@
-import {Link} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Nav = () => {
+export default function Nav() {
   return (
     <nav className="nav">
-      <img
-        src="../../assets/shared/desktop/logo-dark.png"
-        alt="Designo company logo."
-        className="logo">
-      </img>
+      <ul className="nav__list">
+        <li className="nav__item">
+          <Link to="/" className="nav__link link">Home</Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/about" className="nav__link link">About</Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/locations" className="nav__link link">Locations</Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/contact" className="nav__link link">Contact</Link>
+        </li>
+      </ul>
     </nav>
   );
 }
-
-export default Nav;
