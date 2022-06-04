@@ -183,14 +183,12 @@ $light-peach: #FFAD9B;
   align-items: flex-end;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 4rem;
-    
-    &--icons {
-
-    }
 
     .logo {
-      
+      margin-bottom: 2rem;
   
       &__icon {
         height: 1.6875rem;
@@ -200,7 +198,9 @@ $light-peach: #FFAD9B;
   }
 
   &__bar {
-
+    height: 1px;
+    width: 100%;
+    background-color: rgba($white, 10%);
   }
 
   &__list {
@@ -209,11 +209,14 @@ $light-peach: #FFAD9B;
   }
 
   &__item {
-
+    margin-top: 2rem;
   }
 
   &__link {
-
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   &__address {
