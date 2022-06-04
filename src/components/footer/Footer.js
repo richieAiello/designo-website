@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper container">
-        <NavLink to="/" className="footer__logo" aria-label="Link to home page.">
-          <img src={logo} alt="" className="footer__logo--icon"/>
+        <NavLink to="/" aria-label="Link to home page." className="logo">
+          <img src={logo} alt="" className="logo__icon"/>
         </NavLink>
         <div className="footer__bar"></div>
         <ul className="footer__list">
@@ -21,6 +21,20 @@ export default function Footer() {
             <NavLink to="/contact" className="footer__link link">Contact</NavLink>
           </li>
         </ul>
+        <address className="footer__address">
+          <span className="bold">Designo Central Office</span>
+          <br />
+          3886 Wellington Street
+          <br />  
+          Toronto, Ontario M9C 3J5
+        </address>
+        <address className="footer__address">
+          <span className="bold">Contact Us (Central Office)</span>
+          <br />
+          P : <span aria-label="Company phone number.">+1 253-863-8967</span>
+          <br />
+          M : <span aria-label="Company email.">contact@designo.co</span>
+        </address>
         <FooterIcons />
       </div>
     </footer> 

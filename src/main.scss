@@ -178,12 +178,50 @@ $light-peach: #FFAD9B;
   background-color: $black;
   color: $white;
   height: 815px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
 
   &__wrapper {
-
+    margin-bottom: 4rem;
+    
     &--icons {
-      
+
     }
+
+    .logo {
+      
+  
+      &__icon {
+        height: 1.6875rem;
+        width: 202px;
+      }
+    }
+  }
+
+  &__bar {
+
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+
+  &__address {
+    color: rgba($white, 50%);
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-style: normal;
+    margin-bottom: 2.5rem;
   }
 
   &__icon {
