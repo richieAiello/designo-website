@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo-dark.png";
 
 export default function Nav() {
@@ -19,7 +19,7 @@ export default function Nav() {
       navShowCleanUp() :
       navHideCleanUp();
     }, 400);
-
+    
     return () => clearTimeout(timer);
   }, [menuVisibility]);
 
@@ -66,9 +66,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav__wrapper container">
-        <Link to="/">
-          <img src={logo} alt="Designo company logo." className="logo" />
-        </Link>
+        <NavLink to="/" aria-label="Link to home page." className="logo">
+          <img src={logo} alt="Designo company logo." className="logo__icon"/>
+        </NavLink>
         {/* Hidden on tablet and desktop */}
         <button
           type="button" 
@@ -84,13 +84,13 @@ export default function Nav() {
         <div className="nav__menu hidden" ref={navMenu}>
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/about" className="nav__link link">Our Company</Link>
+              <NavLink to="/about" className="nav__link link">Our Company</NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/locations" className="nav__link link">Location</Link>
+              <NavLink to="/locations" className="nav__link link">Locations</NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/contact" className="nav__link link">Contact</Link>
+              <NavLink to="/contact" className="nav__link link">Contact</NavLink>
             </li>
           </ul>
         </div>
