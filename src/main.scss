@@ -173,9 +173,74 @@ $light-peach: #FFAD9B;
 *****************************************/
 // Temporary footer styles
 .footer {
-  background-color: $peach;
-  width: 100%;
+  // Margin is a temporary style
+  margin-top: 6rem;
+  background-color: $black;
+  color: $white;
   height: 815px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+
+    .logo {
+      margin-bottom: 2rem;
+  
+      &__icon {
+        height: 1.6875rem;
+        width: 202px;
+      }
+    }
+  }
+
+  &__bar {
+    height: 1px;
+    width: 100%;
+    background-color: rgba($white, 10%);
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+  }
+
+  &__item {
+    margin-top: 2rem;
+  }
+
+  &__link {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    color: rgba($white, 50%);
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-style: normal;
+    margin-bottom: 2.5rem;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      .footer__icon-fill {
+        fill: $light-peach;
+      }
+    }
+  }
 }
 
 /*****************************************

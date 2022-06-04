@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/nav/Nav";
-import Footer from "./components/footer/Footer";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
@@ -24,7 +23,6 @@ export default function App() {
           <Route path="/graphic-design" element={<GraphicDesign />}/>
           <Route path="/web-design" element={<WebDesign />}/>
         </Routes>
-        <Footer />
       </BrowserRouter>
     </StrictMode>
   );
