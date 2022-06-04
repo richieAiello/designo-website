@@ -173,9 +173,33 @@ $light-peach: #FFAD9B;
 *****************************************/
 // Temporary footer styles
 .footer {
-  background-color: $peach;
-  width: 100%;
+  // Margin is a temporary style
+  margin-top: 6rem;
+  background-color: $black;
+  color: $white;
   height: 815px;
+
+  &__wrapper {
+
+    &--icons {
+      
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      .footer__icon-fill {
+        fill: $light-peach;
+      }
+    }
+  }
 }
 
 /*****************************************

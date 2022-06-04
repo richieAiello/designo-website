@@ -67,7 +67,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav__wrapper container">
         <NavLink to="/" aria-label="Link to home page." className="logo">
-          <img src={logo} alt="Designo company logo." className="logo__icon"/>
+          <img src={logo} alt="" className="logo__icon"/>
         </NavLink>
         {/* Hidden on tablet and desktop */}
         <button

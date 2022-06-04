@@ -24,7 +24,6 @@ export default function App() {
           <Route path="/graphic-design" element={<GraphicDesign />}/>
           <Route path="/web-design" element={<WebDesign />}/>
         </Routes>
-        <Footer />
       </BrowserRouter>
     </StrictMode>
   );
