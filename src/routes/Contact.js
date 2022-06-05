@@ -1,7 +1,9 @@
+import Footer from "../components/footer/Footer";
+
 export default function Contact() {
   return (
     <>
-      <h2>Contact Page</h2>
+      <Footer className="footer--secondary" />
     </>
   );
 }

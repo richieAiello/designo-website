@@ -173,19 +173,26 @@ $light-peach: #FFAD9B;
 *****************************************/
 // Temporary footer styles
 .footer {
-  // Margin is a temporary style
-  margin-top: 6rem;
-  background-color: $black;
-  color: $white;
   height: 815px;
-  text-align: center;
-  display: flex;
-  align-items: flex-end;
+
+  &,
+  &--secondary {
+    margin-top: 6rem;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
+    margin-block: 4rem;
+
+    &--icons {
+      height: 1.5rem;
+    }
 
     .logo {
       margin-bottom: 2rem;

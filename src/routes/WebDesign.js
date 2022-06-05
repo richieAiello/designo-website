@@ -1,7 +1,9 @@
+import Footer from "../components/footer/Footer";
+
 export default function WebDesign() {
   return (
     <>
-      <h2>Web Design Page</h2>
+      <Footer className="footer" />
     </>
   );
 }
