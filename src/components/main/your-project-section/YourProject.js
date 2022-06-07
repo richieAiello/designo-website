@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function YourProject() {
   return (
     <section className="your-project container">
-      <h4 className="your-project__heading">
+      <h4 className="your-project__heading bold">
         Let's talk about
         <br />
         your project
