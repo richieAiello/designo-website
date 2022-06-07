@@ -224,8 +224,102 @@ $light-peach: #FFAD9B;
 *****************************************/
 .main {
   position: relative;
-  background-color: $light-grey;
-  height: 500px;
+  background-color: $white;
+  // z-index: ;
+}
+
+// Section design
+.design {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  padding: 7.5rem 0;
+
+  &__card {
+    height: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 0.9375rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(#000, 50%);
+    background-blend-mode: multiply;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $peach;
+    }
+
+    &--app {
+      background-image: url(./assets/home/mobile/image-app-design.jpg);
+    }
+
+    &--web {
+      background-image: url(./assets/home/mobile/image-web-design.jpg);
+    }
+
+    &--graphic {
+      background-image: url(./assets/home/mobile/image-graphic-design.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    letter-spacing: 1.4px;
+    margin-top: 5.635rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__link {
+    font-size: 0.9375rem;
+    line-height: 21.68px;
+    letter-spacing: 5px;
+  }
+
+  &__icon {
+    margin-left: 1rem;
+  }
+}
+
+.qualities {
+  padding-bottom: 19.4375rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:nth-of-type(2) {
+      margin-block: 5rem
+    }
+  }
+
+  &__context {
+    max-width: 350px;
+    margin-inline: auto;
+  }
+
+  &__heading {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  &__icon {
+    order: -1;
+    margin-bottom: 3rem;
+  }
 }
 
 /*****************************************
