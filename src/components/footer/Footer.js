@@ -5,7 +5,7 @@ import FooterIcons from "./FooterIcons";
 export default function Footer(props) {
   
   return (
-    <footer className={props.className}>
+    <footer className={props.footerClass}>
       <div className="footer__wrapper container">
         <NavLink to="/" aria-label="Link to home page." className="logo">
           <img src={logo} alt="" className="logo__icon"/>
