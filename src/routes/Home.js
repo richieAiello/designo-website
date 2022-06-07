@@ -2,6 +2,7 @@ import Hero from "../components/hero/Hero";
 import Footer from "../components/footer/Footer";
 import HeroBtn from "../components/hero/HeroBtn";
 import HeroImage from "../components/hero/HeroImage";
+import Design from "../components/main/Design";
 
 export default function Home() {
   return (
@@ -21,7 +22,11 @@ export default function Home() {
         image={<HeroImage />}
       />
       <main className="main">
-
+        <Design 
+          webCard={true}
+          appCard={true}
+          graphicCard={true}
+        />
       </main>
       <Footer footerClass="footer" />
     </>

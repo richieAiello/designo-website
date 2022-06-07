@@ -5,7 +5,7 @@ export default function GraphicDesignCard() {
   return (
     <div className="design__card design__card--graphic">
       <h2 className="design__heading">
-        App Design
+        Graphic Design
       </h2>
       <Link to="/graphic-design" className="design__link link">
         View Projects
