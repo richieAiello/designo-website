@@ -4,6 +4,7 @@ import HeroBtn from "../components/hero/HeroBtn";
 import HeroImage from "../components/hero/HeroImage";
 import DesignCard from "../components/main/design-section/DesignCard";
 import Quality from "../components/main/qualities-section/Quality";
+import YourProject from "../components/main/your-project-section/YourProject";
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
             friendly={true}
           />
         </section>
+        <YourProject />
       </main>
       <Footer footerClass="footer" />
     </>
