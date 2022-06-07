@@ -186,10 +186,15 @@ $light-peach: #FFAD9B;
   position: relative;
   
   &--home {
+    background-image: url(./assets/home/desktop/bg-pattern-hero-home.svg);
+    background-repeat: no-repeat;
+    background-position: 0 102px;
     height: 843px;
   }
 
   &__wrapper {
+    max-width: 327px;
+    margin-inline: auto;
 
     &--home {
       margin-top: 5rem;
