@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo-light.png";
 import FooterIcons from "./FooterIcons";
 
-export default function Footer() {
+export default function Footer(props) {
+  
   return (
-    <footer className="footer">
+    <footer className={props.footerClass}>
       <div className="footer__wrapper container">
         <NavLink to="/" aria-label="Link to home page." className="logo">
           <img src={logo} alt="" className="logo__icon"/>

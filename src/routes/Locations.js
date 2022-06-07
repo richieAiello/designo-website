@@ -1,7 +1,9 @@
+import Footer from "../components/footer/Footer";
+
 export default function Locations() {
   return (
     <>
-      <h2>Locations Page</h2>
+      <Footer className="footer" />
     </>
   );
 }

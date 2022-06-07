@@ -1,7 +1,9 @@
+import Footer from "../components/footer/Footer"
+
 export default function AppDesign() {
   return (
     <>
-      <h2>App Design Page</h2>
+      <Footer className="footer" />
     </>
   );
 }
