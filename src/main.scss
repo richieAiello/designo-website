@@ -326,6 +326,9 @@ $light-peach: #FFAD9B;
 .your-project {
   color: $white;
   background-color: $peach;
+  background-image: url(./assets/app-design/desktop/bg-pattern-intro-app.svg);
+  background-repeat: no-repeat;
+  background-position: 45% 50%;
   border-radius: 0.9375rem;
   text-align: center;
   padding: 4rem 1.5rem;
