@@ -370,6 +370,26 @@ $light-peach: #FFAD9B;
   }
 }
 
+// Section projects
+.projects {
+
+  &__card {
+    height: 478px;
+  }
+
+  // &__context {
+
+  // }
+
+  // &__heading {
+
+  // }
+
+  // &__text {
+
+  // }
+}
+
 /*****************************************
   FOOTER
 *****************************************/
@@ -518,7 +538,11 @@ $light-peach: #FFAD9B;
     right: 0;
     margin-inline: auto;
   }
-}
+
+  &--projects {
+    height: 100%;
+  }
+} 
 
 /**********************************
   ANIMATIONS
