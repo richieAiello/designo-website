@@ -183,13 +183,20 @@ $light-peach: #FFAD9B;
   color: $white;
   text-align: center;
   margin-top: 6rem;
-  position: relative;
+  background-repeat: no-repeat;
   
   &--home {
     background-image: url(./assets/home/desktop/bg-pattern-hero-home.svg);
-    background-repeat: no-repeat;
     background-position: 0 102px;
     height: 843px;
+    position: relative;
+  }
+
+  &--design {
+    background-image: url(./assets/web-design/desktop/bg-pattern-intro-web.svg);
+    background-position: 100% 0%;
+    padding-block: 6.5625rem;
+    margin-bottom: 0;
   }
 
   &__wrapper {
@@ -198,6 +205,17 @@ $light-peach: #FFAD9B;
 
     &--home {
       margin-top: 5rem;
+    }
+
+    &--design {
+
+      .hero__heading {
+        margin-bottom: 1.5rem;
+      }
+
+      .hero__text {
+        margin-bottom: 0;
+      }
     }
 
     // &--secondary {
