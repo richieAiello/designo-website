@@ -243,6 +243,10 @@ $light-peach: #FFAD9B;
 .main {
   position: relative;
   background-color: $white;
+
+  &--design {
+    padding-bottom: 17.875rem;
+  }
 }
 
 // Section design
@@ -250,7 +254,10 @@ $light-peach: #FFAD9B;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1.5rem;
-  padding: 7.5rem 0;
+  
+  &--home {
+    padding: 7.5rem 0;
+  }
 
   &__card {
     height: 250px;
@@ -317,6 +324,7 @@ $light-peach: #FFAD9B;
   }
 
   &__context {
+    color: $dark-grey;
     max-width: 350px;
     margin-inline: auto;
   }
@@ -372,22 +380,61 @@ $light-peach: #FFAD9B;
 
 // Section projects
 .projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+  margin-block: 6rem;
 
   &__card {
+    display: flex;
+    flex-direction: column;
     height: 478px;
+    max-width: 327px;
+    text-align: center;
+    margin-inline: auto;
+    
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      .projects__context {
+        background-color: $peach;
+      }
+
+      .projects__heading,
+      .projects__text {
+        color: $white;
+      }
+    }
   }
 
-  // &__context {
+  &__context {
+    order: 2;
+    background-color: #FDF3F0;
+    padding: 2rem 1.5rem;
+    border-bottom-left-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;
+    transition: all 400ms;
+  }
 
-  // }
+  &__heading {
+    text-transform: uppercase;
+    color: $peach;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    transition: all 400ms;
+  }
 
-  // &__heading {
-
-  // }
-
-  // &__text {
-
-  // }
+  &__text {
+    color: $dark-grey;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    max-width: 28ch;
+    margin-inline: auto;
+    transition: all 400ms;
+  }
 }
 
 /*****************************************
@@ -541,6 +588,8 @@ $light-peach: #FFAD9B;
 
   &--projects {
     height: 100%;
+    border-top-left-radius: 0.9375rem;
+    border-top-right-radius: 0.9375rem;
   }
 } 
 
