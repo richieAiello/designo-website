@@ -1,4 +1,4 @@
-import images from "./ProjectsImages";
+import cardData from "./ProjectsCardData";
 import { useRef } from "react";
 
 export default function ProjectsCard(props) {
@@ -11,10 +11,10 @@ export default function ProjectsCard(props) {
   let cardImage;
   let cardHeading;
 
-  images.filter(image => {
-    if (image.id === props.card) {
-      cardImage = image.src;
-      cardHeading = image.heading;
+  cardData.filter(card => {
+    if (card.id === props.card) {
+      cardImage = card.src;
+      cardHeading = card.heading;
     }
   })
 

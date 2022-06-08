@@ -13,7 +13,7 @@ import tim from "../../../assets/graphic-design/desktop/image-change.jpg";
 import boxed from "../../../assets/graphic-design/desktop/image-boxed-water.jpg";
 import science from "../../../assets/graphic-design/desktop/image-science.jpg";
 
-const images = [
+const cardData = [
   { id: 'express', 
     src: express, 
     heading: "Express" 
@@ -72,4 +72,4 @@ const images = [
   }
 ];
 
-export default images;
+export default cardData;
