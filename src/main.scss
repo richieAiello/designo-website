@@ -597,11 +597,23 @@ $light-peach: #FFAD9B;
     border-top-right-radius: 0.9375rem;
   }
 
-  &--about-banner {
-    width: 100%;
-    height: 320px;
-    object-position: top;
+  &--about {
+    &__banner {
+      width: 100%;
+      height: 320px;
+      object-position: top;
+    }
+
+    &__world {
+
+    }
+
+    &__real {
+      
+    }
   }
+
+  
 } 
 
 /**********************************
