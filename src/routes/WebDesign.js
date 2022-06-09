@@ -8,8 +8,7 @@ export default function WebDesign() {
   return (
     <>
       <Hero 
-        heroClass="hero--design"
-        wrapperClass="hero__wrapper--design"
+        modifier="design"
         heading={
           `Web Design`
         }

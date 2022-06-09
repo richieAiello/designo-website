@@ -33,9 +33,9 @@ $light-peach: #FFAD9B;
   width: min(100% - 3rem, 689px);
   margin-inline: auto;
 
-  &--hero {
-    padding:0 1.5rem;
-  }
+  // &--hero {
+
+  // }
 }
 
 .btn,
@@ -199,41 +199,46 @@ $light-peach: #FFAD9B;
     margin-bottom: 0;
   }
 
-  &__wrapper {
-    max-width: 327px;
-    margin-inline: auto;
+  &--about {
+    background-image: url(./assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+    background-position: right 185px;
+  }
 
+  &__wrapper {
+    width: min(100% - 3rem, 327px);
+    margin-inline: auto;
+    
     &--home {
       margin-top: 5rem;
     }
 
-    &--design {
-
-      .hero__heading {
-        margin-bottom: 1.5rem;
-      }
-
-      .hero__text {
-        margin-bottom: 0;
-      }
+    &--about {
+      order: 2;
+      padding: 5rem 0;
     }
-
-    // &--secondary {
-    //   overflow: hidden;
-    //   background-color: #000;
-    // }
   }
 
   &__heading {
     font-size: 2rem;
     line-height: 2.25rem;
-    margin-bottom: 0.875rem;
+
+    &--home {
+      margin-bottom: 0.875rem;
+    }
+    
+    &--design,
+    &--about {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__text {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
-    margin-bottom: 1.5rem;
+
+    &--home {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
@@ -590,6 +595,12 @@ $light-peach: #FFAD9B;
     height: 100%;
     border-top-left-radius: 0.9375rem;
     border-top-right-radius: 0.9375rem;
+  }
+
+  &--about-banner {
+    width: 100%;
+    height: 320px;
+    object-position: top;
   }
 } 
 

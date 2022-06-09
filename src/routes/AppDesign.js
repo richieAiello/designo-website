@@ -7,9 +7,8 @@ import Footer from "../components/footer/Footer"
 export default function AppDesign() {
   return (
     <>
-      <Hero 
-        heroClass="hero--design"
-        wrapperClass="hero__wrapper--design"
+      <Hero
+        modifier="design"
         heading={
           `App Design`
         }
