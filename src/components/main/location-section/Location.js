@@ -6,19 +6,19 @@ import iconUnitedKingdom from "../../../assets/shared/desktop/illustration-unite
 export default function Location() {
   return (
     <section className="location container">
-      <div className="location__wrapper">
+      <div className="location__wrapper location__wrapper--canada">
         <img src={iconCanada} alt="" className="location__icon" />
-        <h3 className="lcoation__heading bold">Canada</h3>
+        <h3 className="location__heading bold">Canada</h3>
         <Link to="/locations" className="btn btn--location link">See Location</Link>
       </div>
-      <div className="location__wrapper">
+      <div className="location__wrapper location__wrapper--australia">
         <img src={iconAustralia} alt="" className="location__icon" />
-        <h3 className="lcoation__heading bold">Australia</h3>
+        <h3 className="location__heading bold">Australia</h3>
         <Link to="/locations" className="btn btn--location link">See Location</Link>
       </div>
-      <div className="location__wrapper">
+      <div className="location__wrapper location__wrapper--united-kingdom">
         <img src={iconUnitedKingdom} alt="" className="location__icon" />
-        <h3 className="lcoation__heading bold">United Kingdom</h3>
+        <h3 className="location__heading bold">United Kingdom</h3>
         <Link to="/locations" className="btn btn--location link">See Location</Link>
       </div>
     </section>

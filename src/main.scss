@@ -6,7 +6,8 @@ $light-grey: #F1F3F5;
 $black: #1D1C1E;
 $dark-grey: #333136;
 $peach: #E7816B;
-$light-peach: #FFAD9B; 
+$light-peach: #FFAD9B;
+$gradient-location: #5D0202;
 
 /*****************************************
   RESET AND SCROLLBAR
@@ -482,6 +483,79 @@ $light-peach: #FFAD9B;
   }
 }
 
+// Section location
+.location {
+  background-color: $white;
+  padding: 7.5rem 0;
+  text-align: center;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 202px;
+      width: 202px;
+      border-radius: 100vw;
+      opacity: 20.27%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+    }
+
+    &--canada {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to top, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--australia {
+      margin-block: 3rem;
+
+      &::before {
+        background-image: 
+          linear-gradient(
+            to left, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--united-kingdom {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to bottom, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    letter-spacing: 5px;
+    color: #333136;
+  }
+}
+
 /*****************************************
   FOOTER
 *****************************************/
@@ -571,6 +645,12 @@ $light-peach: #FFAD9B;
   BUTTONS
 *****************************************/
 .btn {
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  line-height: 21.68px;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -581,23 +661,22 @@ $light-peach: #FFAD9B;
     width: 1.25rem;
     position: relative;
 
-    // &:hover,
-    // &:focus {
-    //   .hamburger {
-    //     background-color: $navy;
-    //   }
-    // }
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: $peach;
+      }
+    }
   }
 
   &--hero,
+   
+
+  &--hero,
   &--your-project {
-    text-transform: uppercase;
-    font-size: 0.9375rem;
-    line-height: 21.68px;
-    letter-spacing: 1px;
     color: $dark-grey;
     background-color: $white;
-    border-radius: 0.5rem;
+    
 
     &:hover,
     &:focus {
@@ -612,6 +691,17 @@ $light-peach: #FFAD9B;
 
   &--your-project {
     padding: 1.0625rem 1.1875rem 1.0625rem 1.125rem;
+  }
+
+  &--location {
+    background-color: $peach;
+    color: $white;
+    padding: 1.125rem 1.15625rem 1rem 1.15625rem;
+
+    &:hover,
+    &:focus {
+      background-color: $light-peach;
+    }
   }
 }
 
