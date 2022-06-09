@@ -8,8 +8,7 @@ export default function WebDesign() {
   return (
     <>
       <Hero 
-        heroClass="hero--design"
-        wrapperClass="hero__wrapper--design"
+        modifier="design"
         heading={
           `Web Design`
         }
@@ -18,7 +17,7 @@ export default function WebDesign() {
           and bring memorable brand experiences.`
         }
       />
-      <main className="main main--design">
+      <main className="main main--secondary">
         <section className="projects container">
           <ProjectsCard 
             card="express" 

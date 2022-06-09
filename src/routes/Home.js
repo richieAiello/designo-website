@@ -10,8 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero 
-        heroClass="hero--home"
-        wrapperClass="hero__wrapper--home"
+        modifier="home"
         heading={
           `Award-winning custom designs and digital branding solutions`
         }

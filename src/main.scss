@@ -6,7 +6,8 @@ $light-grey: #F1F3F5;
 $black: #1D1C1E;
 $dark-grey: #333136;
 $peach: #E7816B;
-$light-peach: #FFAD9B; 
+$light-peach: #FFAD9B;
+$gradient-location: #5D0202;
 
 /*****************************************
   RESET AND SCROLLBAR
@@ -33,9 +34,9 @@ $light-peach: #FFAD9B;
   width: min(100% - 3rem, 689px);
   margin-inline: auto;
 
-  &--hero {
-    padding:0 1.5rem;
-  }
+  // &--hero {
+
+  // }
 }
 
 .btn,
@@ -199,41 +200,46 @@ $light-peach: #FFAD9B;
     margin-bottom: 0;
   }
 
-  &__wrapper {
-    max-width: 327px;
-    margin-inline: auto;
+  &--about {
+    background-image: url(./assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+    background-position: right 185px;
+  }
 
+  &__wrapper {
+    width: min(100% - 3rem, 327px);
+    margin-inline: auto;
+    
     &--home {
       margin-top: 5rem;
     }
 
-    &--design {
-
-      .hero__heading {
-        margin-bottom: 1.5rem;
-      }
-
-      .hero__text {
-        margin-bottom: 0;
-      }
+    &--about {
+      order: 2;
+      padding: 5rem 0;
     }
-
-    // &--secondary {
-    //   overflow: hidden;
-    //   background-color: #000;
-    // }
   }
 
   &__heading {
     font-size: 2rem;
     line-height: 2.25rem;
-    margin-bottom: 0.875rem;
+
+    &--home {
+      margin-bottom: 0.875rem;
+    }
+    
+    &--design,
+    &--about {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__text {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
-    margin-bottom: 1.5rem;
+
+    &--home {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
@@ -244,7 +250,7 @@ $light-peach: #FFAD9B;
   position: relative;
   background-color: $white;
 
-  &--design {
+  &--secondary {
     padding-bottom: 17.875rem;
   }
 }
@@ -437,6 +443,119 @@ $light-peach: #FFAD9B;
   }
 }
 
+// Section about
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: #FDF3F0;
+  background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
+  background-position: left 320px;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__context,
+  &__context--secondary {
+    width: min(100% - 3rem, 327px);
+    margin-inline: auto;
+  }
+
+  &__context {
+    padding: 5rem 0;
+  }
+
+  &__context--secondary {
+    padding: 5rem 0 6.5625rem;
+  }
+
+  &__heading {
+    color: $peach;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    color: $dark-grey;
+
+    &:nth-of-type(1) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Section location
+.location {
+  background-color: $white;
+  padding: 7.5rem 0;
+  text-align: center;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 202px;
+      width: 202px;
+      border-radius: 100vw;
+      opacity: 20.27%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+    }
+
+    &--canada {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to top, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--australia {
+      margin-block: 3rem;
+
+      &::before {
+        background-image: 
+          linear-gradient(
+            to left, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--united-kingdom {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to bottom, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    letter-spacing: 5px;
+    color: #333136;
+  }
+}
+
 /*****************************************
   FOOTER
 *****************************************/
@@ -526,6 +645,12 @@ $light-peach: #FFAD9B;
   BUTTONS
 *****************************************/
 .btn {
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  line-height: 21.68px;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -536,23 +661,22 @@ $light-peach: #FFAD9B;
     width: 1.25rem;
     position: relative;
 
-    // &:hover,
-    // &:focus {
-    //   .hamburger {
-    //     background-color: $navy;
-    //   }
-    // }
+    &:hover,
+    &:focus {
+      .hamburger {
+        background-color: $peach;
+      }
+    }
   }
 
   &--hero,
+   
+
+  &--hero,
   &--your-project {
-    text-transform: uppercase;
-    font-size: 0.9375rem;
-    line-height: 21.68px;
-    letter-spacing: 1px;
     color: $dark-grey;
     background-color: $white;
-    border-radius: 0.5rem;
+    
 
     &:hover,
     &:focus {
@@ -567,6 +691,17 @@ $light-peach: #FFAD9B;
 
   &--your-project {
     padding: 1.0625rem 1.1875rem 1.0625rem 1.125rem;
+  }
+
+  &--location {
+    background-color: $peach;
+    color: $white;
+    padding: 1.125rem 1.15625rem 1rem 1.15625rem;
+
+    &:hover,
+    &:focus {
+      background-color: $light-peach;
+    }
   }
 }
 
@@ -591,6 +726,26 @@ $light-peach: #FFAD9B;
     border-top-left-radius: 0.9375rem;
     border-top-right-radius: 0.9375rem;
   }
+
+  &--about {
+    &__banner {
+      width: 100%;
+      height: 320px;
+      object-position: top;
+    }
+
+    &__world {
+      width: 100%;
+      height: 320px;
+    }
+
+    &__real {
+      width: 100%;
+      height: 320px;
+    }
+  }
+
+  
 } 
 
 /**********************************
