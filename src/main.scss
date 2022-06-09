@@ -249,7 +249,7 @@ $light-peach: #FFAD9B;
   position: relative;
   background-color: $white;
 
-  &--design {
+  &--secondary {
     padding-bottom: 17.875rem;
   }
 }
@@ -442,6 +442,46 @@ $light-peach: #FFAD9B;
   }
 }
 
+// Section about
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: #FDF3F0;
+  background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
+  background-position: left 320px;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__context,
+  &__context--secondary {
+    width: min(100% - 3rem, 327px);
+    margin-inline: auto;
+  }
+
+  &__context {
+    padding: 5rem 0;
+  }
+
+  &__context--secondary {
+    padding: 5rem 0 6.5625rem;
+  }
+
+  &__heading {
+    color: $peach;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    color: $dark-grey;
+
+    &:nth-of-type(1) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
 /*****************************************
   FOOTER
 *****************************************/
@@ -605,11 +645,13 @@ $light-peach: #FFAD9B;
     }
 
     &__world {
-
+      width: 100%;
+      height: 320px;
     }
 
     &__real {
-      
+      width: 100%;
+      height: 320px;
     }
   }
 

@@ -17,7 +17,7 @@ export default function AppDesign() {
           to your customers right at their fingertips.`
         }
       />
-      <main className="main main--design">
+      <main className="main main--secondary">
         <section className="projects container">
           <ProjectsCard 
             card="air"

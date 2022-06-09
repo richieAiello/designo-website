@@ -5,7 +5,7 @@ export default function AboutContext() {
     <section className="about container--secondary">
       <AboutImage />
       <div className="about__context">
-        <h2 className="about__heading">
+        <h2 className="about__heading bold">
           World-class talent
         </h2>
         <p className="about__text">

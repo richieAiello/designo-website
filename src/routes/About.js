@@ -1,5 +1,8 @@
 import Hero from "../components/hero/Hero";
 import HeroBanner from "../components/hero/HeroBanner";
+import AboutContext from "../components/main/about-section/AboutContext";
+import AboutContextSecondary from "../components/main/about-section/AboutContextSecondary";
+import YourProject from "../components/main/your-project-section/YourProject";
 import Footer from "../components/footer/Footer";
 
 export default function About() {
@@ -18,6 +21,11 @@ export default function About() {
         }
         banner={<HeroBanner />}
       />
+      <main className="main main--secondary">
+        <AboutContext />
+        <AboutContextSecondary />
+        <YourProject />
+      </main>
       <Footer footerClass="footer"/>
     </>
   );

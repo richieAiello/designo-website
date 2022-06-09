@@ -17,7 +17,7 @@ export default function WebDesign() {
           and bring memorable brand experiences.`
         }
       />
-      <main className="main main--design">
+      <main className="main main--secondary">
         <section className="projects container">
           <ProjectsCard 
             card="express" 

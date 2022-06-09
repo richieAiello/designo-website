@@ -4,8 +4,8 @@ export default function AboutContextSecondary() {
   return (
     <section className="about container--secondary">
       <AboutImageSecondary />
-      <div className="about__context">
-        <h2 className="about__heading">
+      <div className="about__context--secondary">
+        <h2 className="about__heading bold">
           The real deal
         </h2>
         <p className="about__text">

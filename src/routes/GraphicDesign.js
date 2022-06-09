@@ -17,7 +17,7 @@ export default function GraphicDesign() {
           tailored to meet your business objectives.`
         }
       />
-      <main className="main main--design">
+      <main className="main main--secondary">
         <section className="projects container">
           <ProjectsCard 
             card="tim"
