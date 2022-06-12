@@ -49,6 +49,7 @@ $gradient-location: #5D0202;
   display: inline-block;
   border: initial;
   background-color: initial;
+  font-family: inherit;
   font-weight: 500;
 }
 
@@ -205,6 +206,11 @@ $gradient-location: #5D0202;
     background-position: right 185px;
   }
 
+  &--contact {
+    background-image: url(./assets/contact/mobile/bg-pattern-hero-contact-mobile.svg);
+    background-position: 18% 0%;
+  }
+
   &__wrapper {
     width: min(100% - 3rem, 327px);
     margin-inline: auto;
@@ -217,6 +223,10 @@ $gradient-location: #5D0202;
       order: 2;
       padding: 5rem 0;
     }
+
+    &--contact {
+      margin-block: 4.5rem;
+    }
   }
 
   &__heading {
@@ -228,7 +238,8 @@ $gradient-location: #5D0202;
     }
     
     &--design,
-    &--about {
+    &--about,
+    &--contact {
       margin-bottom: 1.5rem;
     }
   }
@@ -241,6 +252,43 @@ $gradient-location: #5D0202;
       margin-bottom: 1.5rem;
     }
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  &__input,
+  &__message {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1.625rem;
+    color: $white;
+    background-color: initial;
+    border: initial;
+    border-bottom: 1px solid $white;
+    padding-inline: 0.875rem;
+    
+    &::placeholder {
+      color: rgba($white, 50%);
+    }
+  }
+
+  &__input {
+    padding-bottom: 0.6875rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  &__message {
+    resize: none;
+    height: 102px;
+    margin-bottom: 2.5rem;
+  }
+
+  // &__error {
+
+  // }
 }
 
 /*****************************************
@@ -670,14 +718,11 @@ $gradient-location: #5D0202;
   }
 
   &--hero,
-   
-
-  &--hero,
-  &--your-project {
+  &--your-project,
+  &--submit {
     color: $dark-grey;
     background-color: $white;
     
-
     &:hover,
     &:focus {
       color: $white;
@@ -702,6 +747,13 @@ $gradient-location: #5D0202;
     &:focus {
       background-color: $light-peach;
     }
+  }
+
+  &--submit {
+    width: min(100%, 152px);
+    margin-inline: auto;
+    text-align: center;
+    padding: 1.125rem 0 1rem;
   }
 }
 

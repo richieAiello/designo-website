@@ -24,7 +24,7 @@ export default function HeroForm() {
           )
           .required('Valid phone number is required'),
         message: Yup.string()
-           .max(50, 'Must be 50 characters or less.')
+           .max(200, 'Must be 200 characters or less.')
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -65,7 +65,7 @@ export default function HeroForm() {
         <Field 
           name="message" 
           as="textarea" 
-          className="form__input form__message"  
+          className="form__message"  
           placeholder="Your Message"  
         />
         <ErrorMessage name="message" className="form__error" />
