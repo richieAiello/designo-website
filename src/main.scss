@@ -257,10 +257,25 @@ $gradient-location: #5D0202;
 .form {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin-top: 3rem;
+
+  &__wrapper,
+  &__wrapper--secondary {
+    position: relative;
+  }
+
+  &__wrapper {
+    margin-bottom: 1.5625rem;
+
+    &--secondary {
+      margin-bottom: 2.5rem;
+    }
+  }
 
   &__input,
   &__message {
+    width: 100%;
     font-size: inherit;
     font-family: inherit;
     line-height: 1.625rem;
@@ -277,18 +292,33 @@ $gradient-location: #5D0202;
 
   &__input {
     padding-bottom: 0.6875rem;
-    margin-bottom: 1.5625rem;
   }
 
   &__message {
     resize: none;
     height: 102px;
-    margin-bottom: 2.5rem;
   }
 
-  // &__error {
+  &__error,
+  &__error--message {
+    display: flex;
+    align-items: center;
+    background-color: $peach;
+  }
 
-  // }
+  &__error {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+
+    &--message {
+      justify-content: center;
+    }
+  }
+  
+  &__icon {
+    margin-left: 0.5625rem;
+  }
 }
 
 /*****************************************
