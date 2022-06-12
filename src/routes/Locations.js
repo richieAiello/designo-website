@@ -3,7 +3,10 @@ import Footer from "../components/footer/Footer";
 export default function Locations() {
   return (
     <>
-      <Footer className="footer" />
+      <main className="main--locations">
+        
+      </main>
+      <Footer footerClass="footer" />
     </>
   );
 }
