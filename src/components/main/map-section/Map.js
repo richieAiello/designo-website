@@ -2,9 +2,9 @@ export default function Map(props) {
 
   return (
     <section className={`map map--${props.modifier} container--secondary`}>
-      <picture>
-        <source srcSet={props.desktop} media="(min-width: 1440px)" />
-        <img src={props.modifier} alt="" className="image image--map" />
+      <picture className="image--map">
+        <source srcSet={props.imgDesktop} media="(min-width: 1440px)" />
+        <img src={props.img} alt="" className="image image--map" />
       </picture>
       <div className={`map__context map__context--${props.modifier}`}>
         <h1 className="map__heading bold">

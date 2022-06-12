@@ -334,6 +334,7 @@ $gradient-location: #5D0202;
 
   &--locations {
     margin-top: 6rem;
+    padding-bottom: 19.375rem;
   }
 }
 
@@ -635,6 +636,41 @@ $gradient-location: #5D0202;
     line-height: 1.625rem;
     letter-spacing: 5px;
     color: #333136;
+  }
+}
+
+// Section map
+.map {
+  display: flex;
+  flex-direction: column;
+
+  &--australia {
+    margin-block: 2.5rem;
+  }
+
+  &__context {
+    background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 0;
+    color: $dark-grey;
+    background-color: #FDF3F0;
+    padding: 5rem 0;
+  }
+
+  &__heading {
+    color: $peach;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    font-style: normal;
+
+    &:nth-of-type(1) {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 

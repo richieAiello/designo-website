@@ -5,15 +5,17 @@ import australia from "../assets/locations/tablet/image-map-australia.png";
 import australiaDesktop from "../assets/locations/desktop/image-map-australia.png";
 import uk from "../assets/locations/tablet/image-map-uk.png";
 import ukDesktop from "../assets/locations/desktop/image-map-united-kingdom.png"
+import YourProject from "../components/main/your-project-section/YourProject";
 import Footer from "../components/footer/Footer";
 
 export default function Locations() {
   return (
     <>
-      <main className="main--locations">
+      <main className="main main--locations">
         <Map 
-          modifier={canada}
-          desktop={canadaDesktop}
+          modifier="canada"
+          img={canada}
+          imgDesktop={canadaDesktop}
           heading="Canada"
           office="Designo Central Office"
           street="3886 Wellington Street"
@@ -22,8 +24,9 @@ export default function Locations() {
           email="M : contact@designo.co"
         />
         <Map 
-          modifier={australia}
-          desktop={australiaDesktop}
+          modifier="australia"
+          img={australia}
+          imgDesktop={australiaDesktop}
           heading="Australia"
           office="Designo AU Office"
           street="19 Balonne Street"
@@ -32,8 +35,9 @@ export default function Locations() {
           email="M : contact@designo.au"
         />
         <Map 
-          modifier={uk}
-          desktop={ukDesktop}
+          modifier="uk"
+          img={uk}
+          imgDesktop={ukDesktop}
           heading="United Kingdom"
           office="Designo UK Office"
           street="13 Colorado Way"
@@ -41,6 +45,7 @@ export default function Locations() {
           phone="P : 078 3115 1400"
           email="M : contact@designo.uk"
         />
+        <YourProject />
       </main>
       <Footer footerClass="footer" />
     </>
