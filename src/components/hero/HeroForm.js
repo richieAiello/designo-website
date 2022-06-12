@@ -1,11 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup";
-// import 'yup-phone';
+import 'yup-phone';
 import errorIcon from "../../assets/contact/desktop/icon-error.svg";
-
-// phone: Yup.string()
-//   .phone(null, true, 'Invaild phone number')
-//   .required('This field is required'),
 
 export default function HeroForm() {
   return (
@@ -13,16 +9,17 @@ export default function HeroForm() {
       initialValues={{fullName: '', email: '', phone: '', message: ''}}
       validationSchema={Yup.object({
         fullName: Yup.string()
+          .matches(
+            /^[a-z ,.'-]+$/i,
+            'Letters only'
+          )
           .max(20, 'Must be 20 characters or less')
           .required('Required'),
         email: Yup.string()
           .email('Invalid email')
           .required('Required'),
         phone: Yup.string()
-          .matches(
-            /^([0]{1}|\+?[234]{3})([7-9]{1})([0|1]{1})([\d]{1})([\d]{7})$/g,
-            'Invaild phone'
-          )
+          .phone("US", null, 'Invalid 10 digit US phone number')
           .required('Required'),
         message: Yup.string()
            .max(200, 'Must be 200 characters or less.')
@@ -60,15 +57,17 @@ export default function HeroForm() {
           </ErrorMessage>
         </div>
         <div className="form__wrapper">
-          <label htmlFor="phone" className="invisible">Please enter your phone address.</label>
+          <label htmlFor="phone" className="invisible">
+            Please enter a United States phone number with area code.
+          </label>
           <Field
             name="phone"
             type="text"
             className="form__input"
-            placeholder="Phone"
+            placeholder="US Phone # XXX-XXX-XXXX"
           />
           <ErrorMessage name="phone">
-            {msg => <div className="form__error">{msg}<img src={errorIcon} alt="" className="form__icon"/></div>}
+            {msg => <div className="form__error--secondary">{msg}<img src={errorIcon} alt="" className="form__icon"/></div>}
           </ErrorMessage>
         </div>
         <div className="form__wrapper--secondary">
@@ -80,7 +79,7 @@ export default function HeroForm() {
             placeholder="Your Message"
           />
           <ErrorMessage name="message">
-            {msg => <div className="form__error--message">{msg}<img src={errorIcon} alt="" className="form__icon"/></div>}
+            {msg => <div className="form__error--secondary">{msg}<img src={errorIcon} alt="" className="form__icon"/></div>}
           </ErrorMessage>
         </div>
         <button type="submit" className="btn btn--submit">Submit</button>
