@@ -14,9 +14,32 @@ export default function Locations() {
         <Map 
           modifier={canada}
           desktop={canadaDesktop}
-          heading="Hi"
-          office="1"
-          contact="2"
+          heading="Canada"
+          office="Designo Central Office"
+          street="3886 Wellington Street"
+          address="Toronto, Ontario M9C 3J5"
+          phone="P : +1 253-863-8967"
+          email="M : contact@designo.co"
+        />
+        <Map 
+          modifier={australia}
+          desktop={australiaDesktop}
+          heading="Australia"
+          office="Designo AU Office"
+          street="19 Balonne Street"
+          address="New South Wales 2443"
+          phone="P : (02) 6720 9092"
+          email="M : contact@designo.au"
+        />
+        <Map 
+          modifier={uk}
+          desktop={ukDesktop}
+          heading="United Kingdom"
+          office="Designo UK Office"
+          street="13 Colorado Way"
+          address="Rhyd-y-fro SA8 9GA"
+          phone="P : 078 3115 1400"
+          email="M : contact@designo.uk"
         />
       </main>
       <Footer footerClass="footer" />

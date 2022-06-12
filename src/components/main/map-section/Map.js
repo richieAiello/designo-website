@@ -11,10 +11,18 @@ export default function Map(props) {
           {props.heading}
         </h1>
         <address className="map__text">
-          {props.office}
+          <span className="bold">{props.office}</span>
+          <br />
+          {props.street}
+          <br />
+          {props.address}
         </address>
         <address className="map__text">
-          {props.contact}
+          <span className="bold">Contact</span>
+          <br />
+          {props.phone}
+          <br />
+          {props.email}
         </address>
       </div>
     </section>
