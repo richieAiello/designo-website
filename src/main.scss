@@ -309,8 +309,9 @@ $gradient-location: #5D0202;
     }
   
     &--about {
-      background-image: url(./assets/about/mobile/bg-pattern-hero-about-mobile.svg);
-      background-position: right 185px;
+      background-image: url(./assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+      background-position: -122.5px -101.33px;
+      margin-bottom: 7.5rem;
     }
   
     &--contact {
@@ -327,8 +328,7 @@ $gradient-location: #5D0202;
       }
   
       &--about {
-        order: 2;
-        padding: 5rem 0;
+        padding: 4rem 0;
       }
   
       &--contact {
@@ -355,11 +355,15 @@ $gradient-location: #5D0202;
     &__text {
       font-size: inherit;
       line-height: inherit;
+      margin-inline: auto;
   
       &--home {
         max-width: 445px;
-        margin-inline: auto;
         margin-bottom: 1.1875rem;
+      }
+
+      &--about {
+        max-width: 573px;
       }
     }
   }
@@ -951,8 +955,6 @@ $gradient-location: #5D0202;
   max-width: 100%;
   object-fit: cover;
   
-
-
   &--hero {
     position: absolute;
     bottom: -200px;
@@ -968,26 +970,21 @@ $gradient-location: #5D0202;
   }
 
   &--about {
-    &__banner {
-      width: 100%;
-      height: 320px;
-      object-position: top;
-    }
-
-    &__world {
-      width: 100%;
-      height: 320px;
-    }
-
-    &__real {
-      width: 100%;
-      height: 320px;
-    }
+    width: 100%;
+    height: 320px;
+    object-position: top;
   }
 
   &--map {
     width: 100%;
     height: 320px;
+  }
+
+  @media(min-width: 768px) {
+    &--about {
+      border-top-right-radius: 0.9375rem;
+      border-top-left-radius: 0.9375rem;
+    }
   }
 } 
 

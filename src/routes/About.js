@@ -12,7 +12,7 @@ export default function About() {
       <Hero 
         modifier="about"
         heading={
-          `About us`
+          `About Us`
         }
         text={
           `Founded in 2010, we are a creative agency that produces lasting results for our clients. 
