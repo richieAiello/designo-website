@@ -268,7 +268,8 @@ $gradient-location: #5D0202;
     }
 
     &--contact {
-      margin-block: 4.5rem;
+      padding: 4.5rem 0;
+      width: min(100% - 3rem, 573px);
     }
   }
 
@@ -315,13 +316,13 @@ $gradient-location: #5D0202;
     }
   
     &--contact {
-      background-image: url(./assets/contact/mobile/bg-pattern-hero-contact-mobile.svg);
-      background-position: 18% 0%;
+      text-align: left;
+      background-image: url(./assets/contact/desktop/bg-pattern-hero-desktop.svg);
+      background-position: -121.55px -83px;
     }
   
     &__wrapper {
       width: 100%;
-      margin-inline: unset;
       
       &--home {
         margin-top: 3.75rem;
@@ -336,7 +337,8 @@ $gradient-location: #5D0202;
       }
   
       &--contact {
-        margin-block: 4.5rem;
+        padding: 4.4375rem 0;
+        width: min(100% - 3rem, 573px);
       }
     }
   
@@ -399,11 +401,11 @@ $gradient-location: #5D0202;
   &__input,
   &__message {
     width: 100%;
-    font-size: inherit;
+    font-size: 0.9375rem;
     font-family: inherit;
     line-height: 1.625rem;
     color: $white;
-    background-color: $peach;
+    background-color: initial;
     border: initial;
     border-bottom: 1px solid $white;
     padding-inline: 0.875rem;
@@ -441,6 +443,14 @@ $gradient-location: #5D0202;
   
   &__icon {
     margin-left: 0.5625rem;
+  }
+
+  @media(min-width: 768px) {
+    margin-top: 2.5rem;
+
+    &__wrapper--secondary {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
@@ -952,6 +962,11 @@ $gradient-location: #5D0202;
   @media(min-width: 768px) {
     &--hamburger {
       display: none;
+    }
+
+    &--submit {
+      margin-inline: unset;
+      margin-left: auto;
     }
   }
 }
