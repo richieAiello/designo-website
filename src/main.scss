@@ -292,6 +292,77 @@ $gradient-location: #5D0202;
       margin-bottom: 1.5rem;
     }
   }
+
+  @media(min-width: 768px) {
+    margin-top: 9.6875rem;
+    border-radius: 0.9375rem;
+
+    &--home {
+      background-position: 170.55px 101.5px;
+    }
+  
+    &--design {
+      background-image: url(./assets/web-design/desktop/bg-pattern-intro-web.svg);
+      background-position: 100% 0%;
+      padding-block: 6.5625rem;
+      margin-bottom: 0;
+    }
+  
+    &--about {
+      background-image: url(./assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+      background-position: right 185px;
+    }
+  
+    &--contact {
+      background-image: url(./assets/contact/mobile/bg-pattern-hero-contact-mobile.svg);
+      background-position: 18% 0%;
+    }
+  
+    &__wrapper {
+      width: 100%;
+      margin-inline: unset;
+      
+      &--home {
+        margin-top: 3.75rem;
+      }
+  
+      &--about {
+        order: 2;
+        padding: 5rem 0;
+      }
+  
+      &--contact {
+        margin-block: 4.5rem;
+      }
+    }
+  
+    &__heading {
+      font-size: 3rem;
+      line-height: 3rem;
+  
+      &--home {
+        max-width: 573px;
+        margin-inline: auto;
+        margin-bottom: 1.125rem;
+      }
+      
+      &--about,
+      &--contact {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    &__text {
+      font-size: inherit;
+      line-height: inherit;
+  
+      &--home {
+        max-width: 445px;
+        margin-inline: auto;
+        margin-bottom: 1.1875rem;
+      }
+    }
+  }
 }
 
 .form {
@@ -879,6 +950,7 @@ $gradient-location: #5D0202;
 .image {
   max-width: 100%;
   object-fit: cover;
+  
 
 
   &--hero {
