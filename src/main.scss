@@ -28,15 +28,23 @@ $gradient-location: #5D0202;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
+
+  @media(min-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
 }
 
 .container {
   width: min(100% - 3rem, 689px);
   margin-inline: auto;
 
-  // &--hero {
-
-  // }
+  @media(min-width: 768px) {
+    &--secondary {
+      width: 689px;
+      margin-inline: auto;
+    }
+  }
 }
 
 .btn,
