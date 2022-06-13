@@ -87,6 +87,8 @@ $gradient-location: #5D0202;
   display: none;
 }
 
+
+
 /*****************************************
   NAV
 *****************************************/
@@ -156,7 +158,7 @@ $gradient-location: #5D0202;
     height: 9.6875rem;
   
     &__menu {
-      display: initial;
+      display: block;
       background-color: $white;
       color: $dark-grey;
       padding: 0;
@@ -428,7 +430,6 @@ $gradient-location: #5D0202;
   &__error--secondary{
     display: flex;
     align-items: center;
-    background-color: $peach;
   }
 
   &__error {

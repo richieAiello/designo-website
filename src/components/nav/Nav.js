@@ -5,12 +5,18 @@ import clsx from "clsx";
 
 export default function Nav() {
   const [menuVisibile, setMenuVisibile] = useState(false);
+  const [animateIn, setAnimateIn] = useState(false);
+  const [animateOut, setAnimateOut] = useState(false);
   const [hidden, setHidden] = useState(true);
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setDisabled(false);
+
+      menuVisibile ?
+      setAnimateIn(false) :
+      setAnimateOut(false);
 
       !menuVisibile && setHidden(true);
     }, 400);
@@ -22,6 +28,11 @@ export default function Nav() {
     setDisabled(true);
     setHidden(false);
     setMenuVisibile(!menuVisibile);
+
+    !menuVisibile ?
+    setAnimateIn(true) :
+    setAnimateOut(true);
+
   }
 
   return (
@@ -58,8 +69,8 @@ export default function Nav() {
           className={clsx({
             "nav__menu": true,
             "hidden": hidden,
-            "slide-in": menuVisibile,
-            "slide-out": !menuVisibile
+            "slide-in": animateIn,
+            "slide-out": animateOut
           })}
         >
           <ul className="nav__list">
@@ -79,8 +90,8 @@ export default function Nav() {
           className={clsx({
             "nav__shadow": true,
             "hidden": hidden,
-            "fade-in": menuVisibile,
-            "fade-out": !menuVisibile
+            "fade-in": animateIn,
+            "fade-out": animateOut
           })}
         />
       </div>
