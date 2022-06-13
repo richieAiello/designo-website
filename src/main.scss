@@ -237,7 +237,6 @@ $gradient-location: #5D0202;
   &--design {
     background-image: url(./assets/web-design/desktop/bg-pattern-intro-web.svg);
     background-position: 100% 0%;
-    padding-block: 6.5625rem;
     margin-bottom: 0;
   }
 
@@ -257,6 +256,10 @@ $gradient-location: #5D0202;
     
     &--home {
       margin-top: 5rem;
+    }
+
+    &--design {
+      padding: 6.5625rem 0;
     }
 
     &--about {
@@ -302,10 +305,7 @@ $gradient-location: #5D0202;
     }
   
     &--design {
-      background-image: url(./assets/web-design/desktop/bg-pattern-intro-web.svg);
-      background-position: 100% 0%;
-      padding-block: 6.5625rem;
-      margin-bottom: 0;
+      background-position: -20px 50%;
     }
   
     &--about {
@@ -325,6 +325,10 @@ $gradient-location: #5D0202;
       
       &--home {
         margin-top: 3.75rem;
+      }
+
+      &--design {
+        padding: 4rem 0;
       }
   
       &--about {
@@ -364,6 +368,10 @@ $gradient-location: #5D0202;
 
       &--about {
         max-width: 573px;
+      }
+
+      &--design {
+        max-width: 400px;
       }
     }
   }
