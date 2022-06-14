@@ -943,10 +943,10 @@ $gradient-location: #5D0202;
 *****************************************/
 // Temporary footer styles
 .footer {
-  padding-top: 15.8125rem;
+  padding: 15.8125rem 0 4rem;
 
   &--secondary {
-    padding-top: 4rem;
+    padding: 4rem 0;
   }
 
   &,
@@ -954,38 +954,41 @@ $gradient-location: #5D0202;
     background-color: $black;
     color: $white;
     text-align: center;
-    display: flex;
-    align-items: flex-end;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
 
     &--icons {
       height: 1.5rem;
+      order: 5;
     }
 
     .logo {
       margin-bottom: 2rem;
+      order: 1;
   
       &__icon {
         height: 1.6875rem;
         width: 202px;
       }
     }
-  }
 
-  &__bar {
-    height: 1px;
-    width: 100%;
-    background-color: rgba($white, 10%);
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba($white, 10%);
+      order: 2;
+    }
   }
 
   &__list {
     list-style: none;
     margin-bottom: 2.5rem;
+    order: 3;
   }
 
   &__item {
@@ -1000,6 +1003,7 @@ $gradient-location: #5D0202;
   }
 
   &__address {
+    order: 4;
     color: rgba($white, 50%);
     font-size: 1rem;
     line-height: 1.625rem;
@@ -1018,6 +1022,84 @@ $gradient-location: #5D0202;
     &:focus {
       .footer__icon-fill {
         fill: $light-peach;
+      }
+    }
+  }
+
+  @media(min-width: 768px) {
+    padding: 10.375rem 0 5rem;
+
+    &--secondary {
+      padding: 5rem 0;
+    }
+
+    &,
+    &--secondary {
+      text-align: left;
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+
+      &--icons {
+        align-self: flex-end;
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      .logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 2.5rem;
+      }
+
+      &::before {
+        grid-column: 1/-1;
+        grid-row: 2;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__list {
+      grid-column: 2/-1;
+      grid-row: 1;
+      display: flex;
+      margin-bottom: 0;
+      justify-self: flex-end;
+    }
+
+    &__item {
+      margin-top: 0;
+
+      &:nth-of-type(2) {
+        margin: 0 2.625rem;
+      }
+    }
+
+    &__address {
+      grid-column: 1;
+      grid-row: 3;
+      margin-bottom: 0;
+
+      &:nth-of-type(2) {
+        grid-column: 2;
+      }
+    }
+
+    &__icon {
+      margin-right: 1rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &:focus {
+        .footer__icon-fill {
+          fill: $light-peach;
+        }
       }
     }
   }

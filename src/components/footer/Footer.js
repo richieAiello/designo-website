@@ -10,7 +10,6 @@ export default function Footer(props) {
         <NavLink to="/" aria-label="Link to home page." className="logo">
           <img src={logo} alt="" className="logo__icon"/>
         </NavLink>
-        <div className="footer__bar"></div>
         <ul className="footer__list">
           <li className="footer__item">
             <NavLink to="/about" className="footer__link link">Our Company</NavLink>
