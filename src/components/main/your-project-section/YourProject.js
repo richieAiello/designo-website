@@ -4,9 +4,7 @@ export default function YourProject() {
   return (
     <section className="your-project container">
       <h4 className="your-project__heading bold">
-        Let's talk about
-        <br />
-        your project
+        Let's talk about your project
       </h4>
       <p className="your-project__text">
         Ready to take it to the next level? Contact us today and find 
