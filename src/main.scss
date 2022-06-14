@@ -530,6 +530,36 @@ $gradient-location: #5D0202;
   &__icon {
     margin-left: 1rem;
   }
+  
+  @media(min-width: 768px) {
+    &__card {
+      height: 200px;
+
+      &--app {
+        background-image: url(./assets/home/tablet/image-app-design.jpg);
+      }
+
+      &--web {
+        background-image: url(./assets/home/tablet/image-web-design.jpg);
+      }
+
+      &--graphic {
+        background-image: url(./assets/home/tablet/image-graphic-design.jpg);
+      }
+    }
+
+    &__heading {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      letter-spacing: 2px;
+      margin-top: 3.3125rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__icon {
+      margin-left: 1.3125rem;
+    }
+  }
 }
 
 // Section qualities
