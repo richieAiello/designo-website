@@ -771,6 +771,9 @@ $gradient-location: #5D0202;
   }
 
   &__context {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     order: 2;
     background-color: #FDF3F0;
     padding: 2rem 1.5rem;
@@ -796,6 +799,23 @@ $gradient-location: #5D0202;
     max-width: 28ch;
     margin-inline: auto;
     transition: all 400ms;
+  }
+
+  @media(min-width: 768px) {
+    row-gap: 2rem;
+    margin-block: 7.5rem;
+
+    &__card {
+      flex-direction: row;
+      height: 310px;
+      max-width: 100%;
+    }
+
+    &__context {
+      padding: 0 2rem;
+      border-bottom-left-radius: unset;
+      border-top-right-radius: 0.9375rem;
+    }
   }
 }
 
@@ -1255,6 +1275,12 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 768px) {
+    &--projects {
+      width: 339px;
+      border-bottom-left-radius: 0.9375rem;
+      border-top-right-radius: unset;
+    }
+
     &--about {
       border-top-right-radius: 0.9375rem;
       border-top-left-radius: 0.9375rem;

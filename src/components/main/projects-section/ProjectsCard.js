@@ -33,13 +33,13 @@ export default function ProjectsCard(props) {
         <p className="projects__text">
           {props.text}
         </p>
+        <a href="#" tabIndex={-1} aria-hidden={true} className="invisible" ref={link}></a>
       </div>
       <img
         src={cardImage}
         alt=""
         className="image image--projects"
       />
-      <a href="#" tabIndex={-1} aria-hidden={true} className="invisible" ref={link}></a>
     </div>
   );
 }
