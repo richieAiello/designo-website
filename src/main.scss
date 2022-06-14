@@ -156,6 +156,7 @@ $gradient-location: #5D0202;
 
   @media(min-width: 768px) {
     height: 9.6875rem;
+    position: unset;
   
     &__menu {
       display: block;
@@ -300,7 +301,7 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 768px) {
-    margin-top: 9.6875rem;
+    margin-top: 0;
     border-radius: 0.9375rem;
 
     &--home {
@@ -540,6 +541,7 @@ $gradient-location: #5D0202;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 
     &:nth-of-type(2) {
       margin-block: 5rem
@@ -550,6 +552,49 @@ $gradient-location: #5D0202;
     color: $dark-grey;
     max-width: 350px;
     margin-inline: auto;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 202px;
+      width: 202px;
+      border-radius: 100vw;
+      opacity: 20.27%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+    }
+
+    &--passionate {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to left, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--resourceful {
+
+      &::before {
+        background-image: 
+          linear-gradient(
+            to bottom, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
+
+    &--friendly {
+      &::before {
+        background-image: 
+          linear-gradient(
+            to top, rgba($gradient-location, 0.01%), rgba($gradient-location, 49.76%)
+          );
+      }
+    }
   }
 
   &__heading {
@@ -568,6 +613,43 @@ $gradient-location: #5D0202;
   &__icon {
     order: -1;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media(min-width: 768px) {
+    padding-bottom: 20.6875rem;
+
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+
+      &:nth-of-type(2) {
+        margin-block: 2rem
+      }
+    }
+
+    &__context {
+      padding-left: 3rem;
+      max-width: unset;
+      margin-inline: unset;
+
+      &::before {
+        bottom: 0;
+        right: unset;
+        margin-inline: unset;
+        margin-block: auto;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      margin-bottom: 0;
+    }
   }
 }
 

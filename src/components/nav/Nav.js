@@ -32,7 +32,6 @@ export default function Nav() {
     !menuVisibile ?
     setAnimateIn(true) :
     setAnimateOut(true);
-
   }
 
   return (
