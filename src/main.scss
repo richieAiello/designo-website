@@ -87,8 +87,6 @@ $gradient-location: #5D0202;
   display: none;
 }
 
-
-
 /*****************************************
   NAV
 *****************************************/
@@ -471,6 +469,17 @@ $gradient-location: #5D0202;
     margin-top: 6rem;
     padding-bottom: 19.375rem;
   }
+
+  @media(min-width: 768px) {
+    &--secondary {
+      padding-bottom: 24rem;
+    }
+
+    &--locations {
+      margin-top: 0;
+      // padding-bottom: 19.375rem;
+    }
+  }
 }
 
 // Section design
@@ -828,6 +837,29 @@ $gradient-location: #5D0202;
       margin-bottom: 1.5rem;
     }
   }
+
+  @media(min-width: 768px) {
+    background-position: 94px 120px;
+    border-radius: 0.9375rem;
+
+    &__context,
+    &__context--secondary {
+      width: 572px;
+    }
+
+    &__context {
+      padding: 4.25rem 0;
+    }
+
+    &__context--secondary {
+      padding: 4.25rem 0 5.875rem;
+    }
+
+    &__heading {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
 }
 
 // Section location
@@ -900,6 +932,12 @@ $gradient-location: #5D0202;
     line-height: 1.625rem;
     letter-spacing: 5px;
     color: #333136;
+  }
+
+  @media(min-width: 768px) {
+    &__wrapper--australia {
+      margin-block: 5rem
+    }
   }
 }
 
