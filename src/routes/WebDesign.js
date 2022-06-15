@@ -7,17 +7,17 @@ import Footer from "../components/footer/Footer";
 export default function WebDesign() {
   return (
     <>
-      <Hero 
-        modifier="design"
-        heading={
-          `Web Design`
-        }
-        text={
-          `We build websites that serve as powerful marketing tools 
-          and bring memorable brand experiences.`
-        }
-      />
       <main className="main main--secondary">
+        <Hero 
+          modifier="design"
+          heading={
+            `Web Design`
+          }
+          text={
+            `We build websites that serve as powerful marketing tools 
+            and bring memorable brand experiences.`
+          }
+        />
         <section className="projects container">
           <ProjectsCard 
             card="express" 

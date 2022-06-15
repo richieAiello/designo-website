@@ -35,8 +35,8 @@ export default function Nav() {
   }
 
   return (
-    <nav className="nav">
-      <div className="nav__wrapper container">
+    <header className="header">
+      <nav className="nav container">
         <NavLink to="/" aria-label="Link to home page." className="logo">
           <img src={logo} alt="" className="logo__icon"/>
         </NavLink>
@@ -64,7 +64,7 @@ export default function Nav() {
           />
         </button>
         {/* Revealed with hamburger button on mobile. Displayed on tablet and desktop. */}
-        <div 
+        <ul 
           className={clsx({
             "nav__menu": true,
             "hidden": hidden,
@@ -72,18 +72,16 @@ export default function Nav() {
             "slide-out": animateOut
           })}
         >
-          <ul className="nav__list">
-            <li className="nav__item">
-              <NavLink to="/about" className="nav__link link">Our Company</NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/locations" className="nav__link link">Locations</NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/contact" className="nav__link link">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
+          <li className="nav__item">
+            <NavLink to="/about" className="nav__link link">Our Company</NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/locations" className="nav__link link">Locations</NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/contact" className="nav__link link">Contact</NavLink>
+          </li>
+        </ul>
         {/* Page overlay revealed with hamburger button on mobile. Removed for tablet and desktop. */}
         <div 
           className={clsx({
@@ -93,7 +91,7 @@ export default function Nav() {
             "fade-out": animateOut
           })}
         />
-      </div>
-    </nav> 
+      </nav>
+    </header> 
   );
 }

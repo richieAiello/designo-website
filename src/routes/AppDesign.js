@@ -7,17 +7,17 @@ import Footer from "../components/footer/Footer"
 export default function AppDesign() {
   return (
     <>
-      <Hero
-        modifier="design"
-        heading={
-          `App Design`
-        }
-        text={
-          `Our mobile designs bring intuitive digital solutions 
-          to your customers right at their fingertips.`
-        }
-      />
       <main className="main main--secondary">
+        <Hero
+          modifier="design"
+          heading={
+            `App Design`
+          }
+          text={
+            `Our mobile designs bring intuitive digital solutions 
+            to your customers right at their fingertips.`
+          }
+        />
         <section className="projects container">
           <ProjectsCard 
             card="air"

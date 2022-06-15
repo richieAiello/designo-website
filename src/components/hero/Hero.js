@@ -1,6 +1,6 @@
 export default function Hero(props) {
   return (
-    <header className={`hero hero--${props.modifier} container--secondary`}>
+    <section className={`hero hero--${props.modifier} container--secondary`}>
       <div className={`hero__wrapper hero__wrapper--${props.modifier}`}>
         <h1 className={`hero__heading bold hero__heading--${props.modifier}`}>
           {props.heading}
@@ -13,7 +13,7 @@ export default function Hero(props) {
         {props.form}
       </div>
       {props.banner}
-    </header>
+    </section>
   );
 }
 

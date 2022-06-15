@@ -7,17 +7,17 @@ import Footer from "../components/footer/Footer"
 export default function GraphicDesign() {
   return (
     <>
-      <Hero 
-        modifier="design"
-        heading={
-          `Graphic Design`
-        }
-        text={
-          `We deliver eye-catching branding materials that are 
-          tailored to meet your business objectives.`
-        }
-      />
       <main className="main main--secondary">
+        <Hero 
+          modifier="design"
+          heading={
+            `Graphic Design`
+          }
+          text={
+            `We deliver eye-catching branding materials that are 
+            tailored to meet your business objectives.`
+          }
+        />
         <section className="projects container">
           <ProjectsCard 
             card="tim"

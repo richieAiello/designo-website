@@ -45,6 +45,13 @@ $gradient-location: #5D0202;
       margin-inline: auto;
     }
   }
+
+  @media(min-width: 1440px) {
+    &,
+    &--secondary {
+      width: 1100px;
+    }
+  }
 }
 
 .btn,
@@ -90,14 +97,21 @@ $gradient-location: #5D0202;
 /*****************************************
   NAV
 *****************************************/
-.nav {
+.header {
   height: 6rem;
   width: 100%;
   background-color: $white;
   position: fixed;
   z-index: 3;
   top: 0;
-  
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
   .logo {
     height: 1.6875rem;
     width: min(100%, 202px);
@@ -107,29 +121,17 @@ $gradient-location: #5D0202;
     }
   }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-
   &__menu {
+    list-style: none;
+    width: 100%;
     background-color: $black;
     color: $white;
-    padding: 3rem 0;
+    padding: 3rem 1.5rem;
     position: absolute;
-    width: 100%;
     left: 0;
     top: 6rem;
     z-index: 2;
   } 
-
-  &__list {
-    list-style: none;
-    width: min(100% - 3rem, 689px);
-    margin-inline: auto;
-  }
 
   &__item:nth-of-type(2) {
     margin: 2rem 0;
@@ -151,25 +153,23 @@ $gradient-location: #5D0202;
     left: 0;
     z-index: 1;
   }
+}
 
-  @media(min-width: 768px) {
+@media(min-width: 768px) {
+  .header {
     height: 9.6875rem;
     position: unset;
+  }
   
+  .nav {
     &__menu {
-      display: block;
+      display: flex;
       background-color: $white;
       color: $dark-grey;
       padding: 0;
       position: unset;
       width: max-content;
     } 
-  
-    &__list {
-      display: flex;
-      width: max-content;
-      margin-inline: unset;
-    }
   
     &__item:nth-of-type(2) {
       margin: 0 2.625rem;
@@ -217,8 +217,34 @@ $gradient-location: #5D0202;
 }
 
 /*****************************************
-    HERO
+    MAIN
 *****************************************/
+.main {
+  position: relative;
+  background-color: $white;
+
+  &--secondary {
+    padding-bottom: 17.875rem;
+  }
+
+  &--locations {
+    margin-top: 6rem;
+    padding-bottom: 19.375rem;
+  }
+
+  @media(min-width: 768px) {
+    &--secondary {
+      padding-bottom: 24rem;
+    }
+
+    &--locations {
+      margin-top: 0;
+      padding-bottom: 24rem;
+    }
+  }
+}
+
+// Section hero
 .hero {
   display: flex;
   flex-direction: column;
@@ -454,34 +480,6 @@ $gradient-location: #5D0202;
   }
 }
 
-/*****************************************
-    MAIN
-*****************************************/
-.main {
-  position: relative;
-  background-color: $white;
-
-  &--secondary {
-    padding-bottom: 17.875rem;
-  }
-
-  &--locations {
-    margin-top: 6rem;
-    padding-bottom: 19.375rem;
-  }
-
-  @media(min-width: 768px) {
-    &--secondary {
-      padding-bottom: 24rem;
-    }
-
-    &--locations {
-      margin-top: 0;
-      padding-bottom: 24rem;
-    }
-  }
-}
-
 // Section design
 .design {
   display: grid;
@@ -489,7 +487,9 @@ $gradient-location: #5D0202;
   row-gap: 1.5rem;
   
   &--home {
+    background-color: $white;
     padding: 7.5rem 0;
+    position: relative;
   }
 
   &__card {
