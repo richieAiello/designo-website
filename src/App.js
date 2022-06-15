@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import Nav from "./components/nav/Nav";
 import Home from "./routes/Home";
 import About from "./routes/About";
@@ -13,16 +14,18 @@ export default function App() {
   return (
     <StrictMode>
       <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/contact" element={<Contact />}/>
-          <Route path="/locations" element={<Locations />}/>
-          <Route path="/app-design" element={<AppDesign />}/>
-          <Route path="/graphic-design" element={<GraphicDesign />}/>
-          <Route path="/web-design" element={<WebDesign />}/>
-        </Routes>
+        <ScrollToTop>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/contact" element={<Contact />}/>
+            <Route path="/locations" element={<Locations />}/>
+            <Route path="/app-design" element={<AppDesign />}/>
+            <Route path="/graphic-design" element={<GraphicDesign />}/>
+            <Route path="/web-design" element={<WebDesign />}/>
+          </Routes>
+        </ScrollToTop>
       </BrowserRouter>
     </StrictMode>
   );
