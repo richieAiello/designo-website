@@ -9,9 +9,9 @@ export default function Hero(props) {
           {props.text}
         </p>
         {props.btn}
-        {props.image}
         {props.form}
       </div>
+      {props.image}
       {props.banner}
     </section>
   );

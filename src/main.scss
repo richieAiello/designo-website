@@ -404,6 +404,81 @@ $gradient-location: #5D0202;
       }
     }
   }
+
+  @media(min-width: 1440px) {
+
+    &--home {
+      height: 640px;
+      background-position: 100% 0;
+    }
+  
+    &--design {
+      background-position: -20px 50%;
+    }
+  
+    &--about {
+      background-image: url(./assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+      background-position: -122.5px -101.33px;
+      margin-bottom: 7.5rem;
+    }
+  
+    &--contact {
+      text-align: left;
+      background-image: url(./assets/contact/desktop/bg-pattern-hero-desktop.svg);
+      background-position: -121.55px -83px;
+    }
+  
+    &__wrapper {
+      width: 100%;
+      
+      &--home {
+        text-align: left;
+        margin-top: 9.0625rem;
+        margin-left: 5.9375rem;
+      }
+
+      &--design {
+        padding: 4rem 0;
+      }
+  
+      &--about {
+        padding: 4rem 0;
+      }
+  
+      &--contact {
+        padding: 4.4375rem 0;
+        width: min(100% - 3rem, 573px);
+      }
+    }
+  
+    &__heading {
+  
+      &--home {
+        margin-inline: unset;
+      }
+      
+      &--about,
+      &--contact {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    &__text {
+      margin-inline: unset;
+  
+      &--home {
+        margin-bottom: 2.5rem;
+      }
+
+      &--about {
+        max-width: 573px;
+      }
+
+      &--design {
+        max-width: 400px;
+      }
+    }
+  }
 }
 
 .form {
@@ -1277,6 +1352,7 @@ $gradient-location: #5D0202;
   object-fit: cover;
   
   &--hero {
+    max-width: 80%;
     position: absolute;
     bottom: -200px;
     left: 0;
@@ -1317,6 +1393,16 @@ $gradient-location: #5D0202;
       height: 326px;
       border-radius: 0.9375rem;
       margin-bottom: 1.5rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    &--hero {
+      position: absolute;
+      bottom: -72px;
+      left: unset;
+      right: 96px;
+      margin-inline: unset;
     }
   }
 } 
