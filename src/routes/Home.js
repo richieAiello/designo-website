@@ -24,7 +24,7 @@ export default function Home() {
           image={<HeroImage />}
         />
         <section className="design design--home container">
-          <DesignCard web={true} />
+          <DesignCard web={true} large={true} />
           <DesignCard app={true} />
           <DesignCard graphic={true} />
         </section>

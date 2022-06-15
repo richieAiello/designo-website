@@ -464,9 +464,9 @@ $gradient-location: #5D0202;
     }
   
     &__text {
-      margin-inline: unset;
   
       &--home {
+        margin-inline: unset;
         margin-bottom: 2.5rem;
       }
 
@@ -642,6 +642,51 @@ $gradient-location: #5D0202;
 
     &__icon {
       margin-left: 1.3125rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+   
+    
+    &--home {
+      padding: 10rem 0;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 1.5rem;
+      column-gap: 1.875rem;
+    }
+
+    &__card {
+      height: 308px;
+
+      &--large {
+        height: 640px;
+        grid-row: 1/-1;
+
+        .design__heading {
+          margin-top: 17.0625rem;
+        }
+      }
+
+      &--app {
+        background-image: url(./assets/home/desktop/image-app-design.jpg);
+      }
+
+      &--web {
+        background-image: url(./assets/home/desktop/image-web-design-small.jpg);
+      }
+
+      &--large {
+        background-image: url(./assets/home/desktop/image-web-design-large.jpg);
+      }
+
+      &--graphic {
+        background-image: url(./assets/home/desktop/image-graphic-design.jpg);
+      }
+    }
+
+    &__heading {
+      margin-top: 6.6875rem;
     }
   }
 }
