@@ -1,66 +1,37 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo-dark.png";
+import clsx from "clsx";
 
 export default function Nav() {
-  const navMenu = useRef();
-  const navShadow = useRef();
-  const hamburgerBtn = useRef();
-  const hamburgerTop = useRef();
-  const hamburgerBottom = useRef();
-
-  const [menuVisibility, setMenuVisibility] = useState(false);
+  const [menuVisibile, setMenuVisibile] = useState(false);
+  const [animateIn, setAnimateIn] = useState(false);
+  const [animateOut, setAnimateOut] = useState(false);
+  const [hidden, setHidden] = useState(true);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      hamburgerBtn.current.removeAttribute('disabled');
+      setDisabled(false);
 
-      menuVisibility ?
-      navShowCleanUp() :
-      navHideCleanUp();
+      menuVisibile ?
+      setAnimateIn(false) :
+      setAnimateOut(false);
+
+      !menuVisibile && setHidden(true);
     }, 400);
-    
+
     return () => clearTimeout(timer);
-  }, [menuVisibility]);
-
-  const navShow = () => {  
-    hamburgerTop.current.classList.add('flip-top');
-    hamburgerBottom.current.classList.add('flip-bottom');
-  
-    navMenu.current.classList.add('slide-in');
-    navShadow.current.classList.add('fade-in');
-  
-    navMenu.current.classList.remove('hidden');
-    navShadow.current.classList.remove('hidden');
-  }
-
-  const navShowCleanUp = () => {
-    navMenu.current.classList.remove('slide-in');
-    navShadow.current.classList.remove('fade-in');
-  }
-  
-  const navHide = () => {;
-    hamburgerTop.current.classList.remove('flip-top');
-    hamburgerBottom.current.classList.remove('flip-bottom');
-  
-    navMenu.current.classList.add('slide-out');
-    navShadow.current.classList.add('fade-out');
-  }
-
-  const navHideCleanUp = () => {
-    navMenu.current.classList.add('hidden');
-    navMenu.current.classList.remove('slide-out');
-    navShadow.current.classList.add('hidden');
-    navShadow.current.classList.remove('fade-out');
-  }
+  }, [menuVisibile]);
 
   const handleHamburgerClick = e => {
-    hamburgerBtn.current.setAttribute('disabled', 'true');
-    setMenuVisibility(!menuVisibility);
+    setDisabled(true);
+    setHidden(false);
+    setMenuVisibile(!menuVisibile);
 
-    navMenu.current.classList.contains('hidden') ?
-    navShow() :
-    navHide();
+    !menuVisibile ?
+    setAnimateIn(true) :
+    setAnimateOut(true);
   }
 
   return (
@@ -74,14 +45,33 @@ export default function Nav() {
           type="button" 
           aria-label="Open and close navigation menu." 
           className="btn btn--hamburger"
+          disabled={disabled}
           onClick={handleHamburgerClick}
-          ref={hamburgerBtn}
         >
-          <span className="hamburger hamburger--top" ref={hamburgerTop}></span>
-          <span className="hamburger hamburger--bottom" ref={hamburgerBottom}></span>
+          <span 
+            className={clsx({
+              "hamburger": true,
+              "hamburger--top": true,
+              "flip-top": menuVisibile
+            })}
+          />
+          <span 
+            className={clsx({
+              "hamburger": true,
+              "hamburger--bottom": true,
+              "flip-bottom": menuVisibile
+            })}
+          />
         </button>
         {/* Revealed with hamburger button on mobile. Displayed on tablet and desktop. */}
-        <div className="nav__menu hidden" ref={navMenu}>
+        <div 
+          className={clsx({
+            "nav__menu": true,
+            "hidden": hidden,
+            "slide-in": animateIn,
+            "slide-out": animateOut
+          })}
+        >
           <ul className="nav__list">
             <li className="nav__item">
               <NavLink to="/about" className="nav__link link">Our Company</NavLink>
@@ -95,7 +85,14 @@ export default function Nav() {
           </ul>
         </div>
         {/* Page overlay revealed with hamburger button on mobile. Removed for tablet and desktop. */}
-        <div className="nav__shadow hidden" ref={navShadow}></div>
+        <div 
+          className={clsx({
+            "nav__shadow": true,
+            "hidden": hidden,
+            "fade-in": animateIn,
+            "fade-out": animateOut
+          })}
+        />
       </div>
     </nav> 
   );

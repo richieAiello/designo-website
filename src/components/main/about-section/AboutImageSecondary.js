@@ -7,7 +7,7 @@ export default function AboutImageSecondary() {
     <picture>
       <source srcSet={desktop} media="(min-width: 1440px)" />
       <source srcSet={tablet} media="(min-width: 376px)" />
-      <img src={mobile} alt="" className="image image--about__real" />
+      <img src={mobile} alt="" className="image image--about image--about-real" />
     </picture>
   );
 }

@@ -19,8 +19,8 @@ export default function HeroForm() {
           .email('Invalid email')
           .required('Required'),
         phone: Yup.string()
-          .phone("US", null, 'Invalid 10 digit US phone number')
-          .required('Required'),
+          .required('Required')
+          .phone("US", null, 'Invalid 10 digit US phone number'),
         message: Yup.string()
            .max(200, 'Must be 200 characters or less.')
       })}

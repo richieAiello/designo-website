@@ -36,6 +36,7 @@ export default function Home() {
               art, design, and technology into exciting new solutions.`
             }
             passionate={true}
+            mod="passionate"
           />
           <Quality
             text={
@@ -44,6 +45,7 @@ export default function Home() {
               It guarantees superior results that fulfill our clients’ needs.`
             }
             resourceful={true}
+            mod="resourceful"
           />
           <Quality
             text={
@@ -52,6 +54,7 @@ export default function Home() {
               strive to give them the best experience a company can provide.`
             }
             friendly={true}
+            mod="friendly"
           />
         </section>
         <YourProject />

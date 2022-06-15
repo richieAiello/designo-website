@@ -7,7 +7,7 @@ export default function AboutImage() {
     <picture>
       <source srcSet={desktop} media="(min-width: 1440px)" />
       <source srcSet={tablet} media="(min-width: 376px)" />
-      <img src={mobile} alt="" className="image image--about__world" />
+      <img src={mobile} alt="" className="image image--about image--about-world" />
     </picture>
   );
 }

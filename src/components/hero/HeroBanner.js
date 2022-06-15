@@ -7,7 +7,7 @@ export default function HeroBanner() {
     <picture>
       <source srcSet={bannerDesktop} media="(min-width: 1440px)" />
       <source srcSet={bannerTablet} media="(min-width: 376px)" />
-      <img src={bannerMobile} alt="" className="image image--about__banner" />
+      <img src={bannerMobile} alt="" className="image image--about image--about-banner" />
     </picture>
   );
 }

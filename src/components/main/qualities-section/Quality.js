@@ -6,7 +6,7 @@ import friendly from "../../../assets/home/desktop/illustration-friendly.svg";
 export default function Quality(props) {
   return (
     <div className="qualities__wrapper">
-      <div className="qualities__context">
+      <div className={`qualities__context qualities__context--${props.mod}`}>
         <h3 className="qualities__heading bold">
           {props.passionate && "Passionate"}
           {props.resourceful && "Resourceful"}
