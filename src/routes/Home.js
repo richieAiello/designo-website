@@ -9,7 +9,7 @@ import YourProject from "../components/main/your-project-section/YourProject";
 export default function Home() {
   return (
     <>
-      <main className="main">
+      <main className="main main--home container--main">
         <Hero 
           modifier="home"
           heading={

@@ -11,7 +11,7 @@ import Footer from "../components/footer/Footer";
 export default function Locations() {
   return (
     <>
-      <main className="main main--locations">
+      <main className="main main--locations container--main">
         <Map 
           modifier="canada"
           img={canada}

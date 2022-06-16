@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer"
 export default function AppDesign() {
   return (
     <>
-      <main className="main main--secondary">
+      <main className="main main--secondary main--design container--main">
         <Hero
           modifier="design"
           heading={

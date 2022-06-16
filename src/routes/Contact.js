@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer"
 export default function Contact() {
   return (
     <>
-      <main className="main">
+      <main className="main main--contact container--main">
         <Hero 
           modifier="contact"
           heading={

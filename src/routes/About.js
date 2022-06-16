@@ -9,7 +9,7 @@ import Footer from "../components/footer/Footer";
 export default function About() {
   return (
     <>
-      <main className="main main--secondary">
+      <main className="main main--secondary main--about container--main">
         <Hero 
           modifier="about"
           heading={
