@@ -1242,6 +1242,16 @@ $gradient-location: #5D0202;
       margin-block: 5rem
     }
   }
+
+  @media(min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 0;
+
+    &__wrapper--australia {
+      margin-block: unset;
+    }
+  }
 }
 
 // Section map
