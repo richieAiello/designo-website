@@ -7,43 +7,43 @@ import Footer from "../components/footer/Footer"
 export default function AppDesign() {
   return (
     <>
-      <main className="main main--secondary main--design container--main">
+      <main className="main main--design">
         <Hero
           modifier="design"
           heading={
             `App Design`
           }
           text={
-            `Our mobile designs bring intuitive digital solutions 
+            `Our mobile designs bring intuitive digital solutions
             to your customers right at their fingertips.`
           }
         />
         <section className="projects container">
-          <ProjectsCard 
+          <ProjectsCard
             card="air"
             text={
               `Solving the problem of poor indoor air quality by filtering the air`
             }
           />
-          <ProjectsCard 
+          <ProjectsCard
             card="eye"
             text={
               `Product that lets you edit your favorite photos and videos at any time`
             }
           />
-          <ProjectsCard 
+          <ProjectsCard
             card="faceit"
             text={
               `Get to meet your favorite internet superstar with the faceit app`
             }
           />
-          <ProjectsCard 
+          <ProjectsCard
             card="todo"
             text={
               `A todo app that features cloud sync with light and dark mode`
             }
           />
-          <ProjectsCard 
+          <ProjectsCard
             card="loop"
             text={
               `A VR experience app made for Loopstudios`

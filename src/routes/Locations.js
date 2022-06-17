@@ -11,8 +11,8 @@ import Footer from "../components/footer/Footer";
 export default function Locations() {
   return (
     <>
-      <main className="main main--locations container--main">
-        <Map 
+      <main className="main main--locations">
+        <Map
           modifier="canada"
           img={canada}
           imgDesktop={canadaDesktop}
@@ -23,7 +23,7 @@ export default function Locations() {
           phone="P : +1 253-863-8967"
           email="M : contact@designo.co"
         />
-        <Map 
+        <Map
           modifier="australia"
           img={australia}
           imgDesktop={australiaDesktop}
@@ -34,7 +34,7 @@ export default function Locations() {
           phone="P : (02) 6720 9092"
           email="M : contact@designo.au"
         />
-        <Map 
+        <Map
           modifier="uk"
           img={uk}
           imgDesktop={ukDesktop}
