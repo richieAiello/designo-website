@@ -490,8 +490,9 @@ $gradient-location: #5D0202;
     }
   
     &--contact {
+      height: 480px;
       text-align: left;
-      background-position: -121.55px -83px;
+      background-position: bottom 0 left 0;
     }
   
     &__wrapper {
@@ -517,8 +518,19 @@ $gradient-location: #5D0202;
       }
   
       &--contact {
-        padding: 4.4375rem 0;
-        width: min(100% - 3rem, 573px);
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5.9375rem;
+      }
+    }
+
+    &__context {
+
+      &--contact {
+        max-width: 445px;
       }
     }
   
@@ -526,11 +538,6 @@ $gradient-location: #5D0202;
   
       &--home {
         margin-inline: unset;
-      }
-      
-      &--about,
-      &--contact {
-        margin-bottom: 2rem;
       }
     }
   
@@ -548,6 +555,12 @@ $gradient-location: #5D0202;
 
       &--design {
         max-width: 400px;
+      }
+
+      &--contact {
+        margin-inline: unset;
+        // max-width: 445px;
+        grid-column: 1;
       }
     }
   }
@@ -620,6 +633,16 @@ $gradient-location: #5D0202;
 
   @media(min-width: 768px) {
     margin-top: 2.5rem;
+
+    &__wrapper--secondary {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    grid-column: 2;
+    width: 380px;
+    margin-top: 0;
 
     &__wrapper--secondary {
       margin-bottom: 1.5rem;
