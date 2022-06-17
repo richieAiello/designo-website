@@ -1,28 +1,32 @@
 import Hero from "../components/hero/Hero";
-import Footer from "../components/footer/Footer";
+import HeroWrapper from "../components/hero/HeroWrapper";
 import HeroBtn from "../components/hero/HeroBtn";
 import HeroImage from "../components/hero/HeroImage";
 import DesignCard from "../components/main/design-section/DesignCard";
 import Quality from "../components/main/qualities-section/Quality";
 import YourProject from "../components/main/your-project-section/YourProject";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
     <>
       <main className="main main--home">
-        <Hero
-          modifier="home"
-          heading={
-            `Award-winning custom designs and digital branding solutions`
-          }
-          text={
-            `With over 10 years in the industry, we are experienced in
-            creating fully responsive websites, app design,
-            and engaging brand experiences. Find out more about our services.`
-          }
-          btn={<HeroBtn />}
-          image={<HeroImage />}
-        />
+        <Hero mod="home">
+          <HeroWrapper
+            mod="home"
+            heading={
+              `Award-winning custom designs and digital branding solutions`
+            }
+            text={
+              `With over 10 years in the industry, we are experienced in
+              creating fully responsive websites, app design,
+              and engaging brand experiences. Find out more about our services.`
+            }
+          >
+            <HeroBtn />
+          </HeroWrapper>
+          <HeroImage />
+        </Hero>
         <section className="design design--home container">
           <DesignCard web={true} large={true} />
           <DesignCard app={true} />

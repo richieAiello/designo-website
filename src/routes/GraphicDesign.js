@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import HeroWrapper from "../components/hero/HeroWrapper";
 import ProjectsCard from "../components/main/projects-section/ProjectsCard";
 import DesignCard from "../components/main/design-section/DesignCard";
 import YourProject from "../components/main/your-project-section/YourProject";
@@ -8,16 +9,18 @@ export default function GraphicDesign() {
   return (
     <>
       <main className="main main--design">
-        <Hero
-          modifier="design"
-          heading={
-            `Graphic Design`
-          }
-          text={
-            `We deliver eye-catching branding materials that are
-            tailored to meet your business objectives.`
-          }
-        />
+        <Hero mod="design">
+          <HeroWrapper
+            mod="design"
+            heading={
+              `Graphic Design`
+            }
+            text={
+              `We deliver eye-catching branding materials that are
+              tailored to meet your business objectives.`
+            }
+          />
+        </Hero>
         <section className="projects container">
           <ProjectsCard
             card="tim"

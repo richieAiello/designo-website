@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import HeroWrapper from "../components/hero/HeroWrapper";
 import ProjectsCard from "../components/main/projects-section/ProjectsCard";
 import DesignCard from "../components/main/design-section/DesignCard";
 import YourProject from "../components/main/your-project-section/YourProject";
@@ -8,16 +9,18 @@ export default function AppDesign() {
   return (
     <>
       <main className="main main--design">
-        <Hero
-          modifier="design"
-          heading={
-            `App Design`
-          }
-          text={
-            `Our mobile designs bring intuitive digital solutions
-            to your customers right at their fingertips.`
-          }
-        />
+        <Hero mod="design">
+          <HeroWrapper
+            mod="design"
+            heading={
+              `App Design`
+            }
+            text={
+              `Our mobile designs bring intuitive digital solutions
+              to your customers right at their fingertips.`
+            }
+          />
+        </Hero>
         <section className="projects container">
           <ProjectsCard
             card="air"
