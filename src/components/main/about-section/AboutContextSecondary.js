@@ -2,7 +2,7 @@ import AboutImageSecondary from "./AboutImageSecondary";
 
 export default function AboutContextSecondary() {
   return (
-    <section className="about container--secondary">
+    <section className="about--secondary container--secondary">
       <AboutImageSecondary />
       <div className="about__context--secondary">
         <h2 className="about__heading bold">

@@ -482,14 +482,15 @@ $gradient-location: #5D0202;
     }
   
     &--about {
-      background-image: url(./assets/about/desktop/bg-pattern-hero-about-desktop.svg);
-      background-position: -122.5px -101.33px;
-      margin-bottom: 7.5rem;
+      display: grid;
+      grid-template-columns: 624px 1fr;
+      grid-template-rows: 480px;
+      background-position: bottom 0 right 476px;
+      margin-bottom: 10rem;
     }
   
     &--contact {
       text-align: left;
-      background-image: url(./assets/contact/desktop/bg-pattern-hero-desktop.svg);
       background-position: -121.55px -83px;
     }
   
@@ -507,7 +508,12 @@ $gradient-location: #5D0202;
       }
   
       &--about {
-        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        order: unset;
+        padding: 0 0 0 5.9375rem;
       }
   
       &--contact {
@@ -536,7 +542,8 @@ $gradient-location: #5D0202;
       }
 
       &--about {
-        max-width: 573px;
+        margin-inline: unset;
+        max-width: 458px;
       }
 
       &--design {
@@ -1057,14 +1064,17 @@ $gradient-location: #5D0202;
 
 // Section about
 .about {
-  display: flex;
-  flex-direction: column;
-  background-color: #FDF3F0;
-  background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
-  background-position: left 320px;
-  background-repeat: no-repeat;
-  text-align: center;
-
+  &,
+  &--secondary {
+    display: flex;
+    flex-direction: column;
+    background-color: #FDF3F0;
+    background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
+    background-position: left 0 top 320px;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  
   &__context,
   &__context--secondary {
     width: min(100% - 3rem, 327px);
@@ -1095,9 +1105,12 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 768px) {
-    background-position: 94px 120px;
-    border-radius: 0.9375rem;
-
+    &,
+    &--secondary {
+      background-position: bottom 44px right 0;
+      border-radius: 0.9375rem;
+    }
+    
     &__context,
     &__context--secondary {
       width: 572px;
@@ -1114,6 +1127,41 @@ $gradient-location: #5D0202;
     &__heading {
       font-size: 2.5rem;
       line-height: 3rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    &,
+    &--secondary {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    & {
+      background-position: bottom 0 right 197px ;
+    }
+    
+    &--secondary {
+      background-position: bottom 0 left 0;
+    }
+    
+    &__context,
+    &__context--secondary {
+      text-align: left;
+      width: 635px;
+    }
+
+    &__context {
+      padding: 0 0 0 5.875rem;
+    }
+
+    &__context--secondary {
+      order: -1;
+      padding: 0 5.875rem 0;
+    }
+
+    &__text {
+      max-width: 445px;
     }
   }
 }
@@ -1496,6 +1544,7 @@ $gradient-location: #5D0202;
 .image {
   max-width: 100%;
   object-fit: cover;
+  vertical-align: middle;
   
   &--hero {
     max-width: 80%;
@@ -1549,6 +1598,27 @@ $gradient-location: #5D0202;
       left: unset;
       right: 96px;
       margin-inline: unset;
+    }
+
+    &--about {
+      &-banner {
+      height: 100%;
+      border-bottom-right-radius: 0.9375rem;
+      border-top-left-radius: unset;
+      }
+      
+
+      &-world {
+        height: 640px;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 0.9375rem;
+      }
+
+      &-real {
+        height: 640px;
+        border-top-left-radius: unset;
+        border-bottom-right-radius: 0.9375rem;
+      }
     }
   }
 } 
