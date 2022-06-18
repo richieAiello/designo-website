@@ -740,13 +740,14 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 1440px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.875rem;
    
     &--home {
       padding: 10rem 0;
       grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(2, auto);
       row-gap: 1.5rem;
-      column-gap: 1.875rem;
     }
 
     &__card {
@@ -1081,6 +1082,23 @@ $gradient-location: #5D0202;
       padding: 0 2rem;
       border-bottom-left-radius: unset;
       border-top-right-radius: 0.9375rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 1.875rem;
+    margin-block: 10rem;
+ 
+    &__card {
+      flex-direction: column;
+      height: 478px;
+    }
+
+    &__context {
+      padding: 2rem;
+      border-bottom-left-radius: 0.9375rem;
+      border-top-right-radius: unset;
     }
   }
 }
@@ -1671,6 +1689,11 @@ $gradient-location: #5D0202;
         border-top-left-radius: unset;
         border-bottom-right-radius: 0.9375rem;
       }
+    }
+
+    &--projects {
+      border-bottom-left-radius: unset;
+      border-top-right-radius: 0.9375rem;
     }
 
     &--map {
