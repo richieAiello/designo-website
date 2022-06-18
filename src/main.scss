@@ -1476,6 +1476,11 @@ $gradient-location: #5D0202;
     line-height: 0.875rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__address {
@@ -1492,6 +1497,10 @@ $gradient-location: #5D0202;
 
     &:last-of-type {
       margin-right: 0;
+    }
+
+    &-fill {
+      transition: all 400ms;
     }
 
     &:hover,
