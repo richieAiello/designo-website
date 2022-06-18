@@ -24,24 +24,26 @@ export default function DesignCard(props) {
       role="link"
       aria-label="Click to view projects."
     >
-      <h2 className="design__heading bold">
-        {props.app && "App Design"}
-        {props.web && "Web Design"}
-        {props.graphic && "Graphic Design"}
-      </h2>
-      <Link 
-        to={clsx({
-          "/app-design": props.app,
-          "/web-design": props.web,
-          "/graphic-design": props.graphic
-        })}
-        className="design__link link" 
-        ref={link}
-        tabIndex={-1}
-      >
-        View Projects
-        <img src={icon} alt="" className="design__icon"/>
-      </Link>  
+      <div className="design__context">
+        <h2 className="design__heading bold">
+          {props.app && "App Design"}
+          {props.web && "Web Design"}
+          {props.graphic && "Graphic Design"}
+        </h2>
+        <Link
+          to={clsx({
+            "/app-design": props.app,
+            "/web-design": props.web,
+            "/graphic-design": props.graphic
+          })}
+          className="design__link link"
+          ref={link}
+          tabIndex={-1}
+        >
+          View Projects
+          <img src={icon} alt="" className="design__icon"/>
+        </Link>
+      </div>
     </div>
   );
 }
