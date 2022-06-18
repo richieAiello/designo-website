@@ -1337,6 +1337,25 @@ $gradient-location: #5D0202;
       margin-bottom: 0; 
     }
   }
+
+  @media(min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 326px;
+
+    &--australia {
+      margin-block: 2rem;
+    } 
+
+    &__context {
+      width: 730px;
+
+      &--canada,
+      &--uk {
+        order: -1;
+      }
+    }
+  }
 }
 
 /*****************************************
@@ -1652,6 +1671,10 @@ $gradient-location: #5D0202;
         border-top-left-radius: unset;
         border-bottom-right-radius: 0.9375rem;
       }
+    }
+
+    &--map {
+      width: 350px;
     }
   }
 } 
