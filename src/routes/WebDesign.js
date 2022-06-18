@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import HeroWrapper from "../components/hero/HeroWrapper";
 import ProjectsCard from "../components/main/projects-section/ProjectsCard";
 import DesignCard from "../components/main/design-section/DesignCard";
 import YourProject from "../components/main/your-project-section/YourProject";
@@ -7,50 +8,52 @@ import Footer from "../components/footer/Footer";
 export default function WebDesign() {
   return (
     <>
-      <Hero 
-        modifier="design"
-        heading={
-          `Web Design`
-        }
-        text={
-          `We build websites that serve as powerful marketing tools 
-          and bring memorable brand experiences.`
-        }
-      />
-      <main className="main main--secondary">
+      <main className="main main--design">
+        <Hero mod="design">
+          <HeroWrapper
+            mod="design"
+            heading={
+              `Web Design`
+            }
+            text={
+              `We build websites that serve as powerful marketing tools
+              and bring memorable brand experiences.`
+            }
+          />
+        </Hero>
         <section className="projects container">
-          <ProjectsCard 
-            card="express" 
+          <ProjectsCard
+            card="express"
             text={
               `A multi-carrier shipping website for ecommerce businesses`
             }
           />
-          <ProjectsCard 
-            card="transfer" 
+          <ProjectsCard
+            card="transfer"
             text={
               `Site for low-cost money transfers and sending money within seconds`
             }
           />
-          <ProjectsCard 
-            card="photon" 
+          <ProjectsCard
+            card="photon"
             text={
               `A state-of-the-art music player with high-resolution audio and DSP effects`
             }
           />
-          <ProjectsCard 
-            card="builder" 
+          <ProjectsCard
+            card="builder"
             text={
               `Connects users with local contractors based on their location`
             }
           />
-          <ProjectsCard 
-            card="blogr" 
+          <ProjectsCard
+            card="blogr"
             text={
               `Blogr is a platform for creating an online blog or publication`
             }
           />
-          <ProjectsCard 
-            card="camp" 
+          <ProjectsCard
+            card="camp"
             text={
               `Get expert training in coding, data, design, and digital marketing`
             }

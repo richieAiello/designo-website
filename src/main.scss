@@ -35,6 +35,10 @@ $gradient-location: #5D0202;
   }
 }
 
+.root {
+  overflow-x: hidden;
+}
+
 .container {
   width: min(100% - 3rem, 689px);
   margin-inline: auto;
@@ -43,6 +47,13 @@ $gradient-location: #5D0202;
     &--secondary {
       width: 689px;
       margin-inline: auto;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    &,
+    &--secondary {
+      width: 1100px;
     }
   }
 }
@@ -90,14 +101,21 @@ $gradient-location: #5D0202;
 /*****************************************
   NAV
 *****************************************/
-.nav {
+.header {
   height: 6rem;
   width: 100%;
   background-color: $white;
   position: fixed;
   z-index: 3;
   top: 0;
-  
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
   .logo {
     height: 1.6875rem;
     width: min(100%, 202px);
@@ -107,29 +125,17 @@ $gradient-location: #5D0202;
     }
   }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-
   &__menu {
+    list-style: none;
+    width: 100%;
     background-color: $black;
     color: $white;
-    padding: 3rem 0;
+    padding: 3rem 1.5rem;
     position: absolute;
-    width: 100%;
     left: 0;
     top: 6rem;
     z-index: 2;
   } 
-
-  &__list {
-    list-style: none;
-    width: min(100% - 3rem, 689px);
-    margin-inline: auto;
-  }
 
   &__item:nth-of-type(2) {
     margin: 2rem 0;
@@ -151,25 +157,23 @@ $gradient-location: #5D0202;
     left: 0;
     z-index: 1;
   }
+}
 
-  @media(min-width: 768px) {
+@media(min-width: 768px) {
+  .header {
     height: 9.6875rem;
     position: unset;
+  }
   
+  .nav {
     &__menu {
-      display: block;
+      display: flex;
       background-color: $white;
       color: $dark-grey;
       padding: 0;
       position: unset;
       width: max-content;
     } 
-  
-    &__list {
-      display: flex;
-      width: max-content;
-      margin-inline: unset;
-    }
   
     &__item:nth-of-type(2) {
       margin: 0 2.625rem;
@@ -217,8 +221,94 @@ $gradient-location: #5D0202;
 }
 
 /*****************************************
-    HERO
+    MAIN
 *****************************************/
+.main {
+  position: relative;
+
+  &--home {
+    padding-bottom: 19.4375rem;
+  }
+
+  &--about {
+    padding-bottom: 19.375rem;
+  }
+
+  &--design {
+    padding-bottom: 17.875rem;
+  }
+
+  &--locations {
+    margin-top: 6rem;
+    padding-bottom: 19.375rem;
+  }
+
+  @media(min-width: 768px) {
+    &--home {
+      padding-bottom: 20.6875rem;
+    }
+
+    &--design,
+    &--about,
+    &--locations {
+      padding-bottom: 24rem;
+    }
+
+    &--locations {
+      margin-top: 0;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    width: 1440px;
+    margin-inline: auto;
+    background-repeat: no-repeat;
+
+    &--home,
+    &--design,
+    &--about,
+    &--locations {
+      padding-bottom: 23.75rem;
+    }
+
+    &--home {
+      background-image: 
+        url(./assets/shared/desktop/bg-pattern-leaf.svg),
+        url(./assets/shared/desktop/bg-pattern-leaf-flipped.svg);
+      background-position: 
+        left 0 top 320px, 
+        bottom 74px right 0;
+    }
+
+    &--about {
+      background-image: url(./assets/shared/desktop/bg-pattern-leaf.svg);
+      background-position: left 0 top 320px;
+
+      /* Inserted svg with pseudo element rather than backgroud image to be relative to container--main,
+      while extending to end of page. Root element for page has overflow-x: hidden to secure the design. */
+      &::after {
+        content: url(./assets/shared/desktop/bg-pattern-leaf.svg);
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 768px;
+        left: 830px;
+      }
+    }
+
+    &--design {
+      background-image: url(./assets/shared/desktop/bg-pattern-leaf.svg);
+      background-position: left 0 top 126px;
+    }
+
+    &--contact {
+      background-image: url(./assets/shared/desktop/bg-pattern-leaf.svg);
+      background-position: right 0 bottom -160px;
+    }
+  }
+}
+
+// Section hero
 .hero {
   display: flex;
   flex-direction: column;
@@ -230,9 +320,10 @@ $gradient-location: #5D0202;
   
   &--home {
     background-image: url(./assets/home/desktop/bg-pattern-hero-home.svg);
-    background-position: 0 102px;
+    background-position: left 0 top 102px;
     height: 843px;
     position: relative;
+    overflow: hidden;
   }
 
   &--design {
@@ -303,7 +394,7 @@ $gradient-location: #5D0202;
     border-radius: 0.9375rem;
 
     &--home {
-      background-position: 170.55px 101.5px;
+      background-position: left 170.55px top 101.5px;
     }
   
     &--design {
@@ -375,6 +466,101 @@ $gradient-location: #5D0202;
 
       &--design {
         max-width: 400px;
+      }
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    &--home {
+      height: 640px;
+      background-position: right 0 top 0;
+    }
+  
+    &--design {
+      background-position: -20px 50%;
+    }
+  
+    &--about {
+      display: grid;
+      grid-template-columns: 624px 1fr;
+      grid-template-rows: 480px;
+      background-position: bottom 0 right 476px;
+      margin-bottom: 10rem;
+    }
+  
+    &--contact {
+      height: 480px;
+      text-align: left;
+      background-position: bottom 0 left 0;
+    }
+  
+    &__wrapper {
+      width: 100%;
+      
+      &--home {
+        text-align: left;
+        margin-top: 9.0625rem;
+        margin-left: 5.9375rem;
+      }
+
+      &--design {
+        padding: 4rem 0;
+      }
+  
+      &--about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        order: unset;
+        padding: 0 0 0 5.9375rem;
+      }
+  
+      &--contact {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5.9375rem;
+      }
+    }
+
+    &__context {
+
+      &--contact {
+        max-width: 445px;
+      }
+    }
+  
+    &__heading {
+  
+      &--home {
+        margin-inline: unset;
+      }
+    }
+  
+    &__text {
+  
+      &--home {
+        margin-inline: unset;
+        margin-bottom: 2.5rem;
+      }
+
+      &--about {
+        margin-inline: unset;
+        max-width: 458px;
+      }
+
+      &--design {
+        max-width: 400px;
+      }
+
+      &--contact {
+        margin-inline: unset;
+        // max-width: 445px;
+        grid-column: 1;
       }
     }
   }
@@ -452,32 +638,14 @@ $gradient-location: #5D0202;
       margin-bottom: 1.5rem;
     }
   }
-}
 
-/*****************************************
-    MAIN
-*****************************************/
-.main {
-  position: relative;
-  background-color: $white;
+  @media(min-width: 1440px) {
+    grid-column: 2;
+    width: 380px;
+    margin-top: 0;
 
-  &--secondary {
-    padding-bottom: 17.875rem;
-  }
-
-  &--locations {
-    margin-top: 6rem;
-    padding-bottom: 19.375rem;
-  }
-
-  @media(min-width: 768px) {
-    &--secondary {
-      padding-bottom: 24rem;
-    }
-
-    &--locations {
-      margin-top: 0;
-      padding-bottom: 24rem;
+    &__wrapper--secondary {
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -490,6 +658,7 @@ $gradient-location: #5D0202;
   
   &--home {
     padding: 7.5rem 0;
+    position: relative;
   }
 
   &__card {
@@ -569,11 +738,55 @@ $gradient-location: #5D0202;
       margin-left: 1.3125rem;
     }
   }
+
+  @media(min-width: 1440px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.875rem;
+   
+    &--home {
+      padding: 10rem 0;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 1.5rem;
+    }
+
+    &__card {
+      height: 308px;
+
+      &--large {
+        height: 640px;
+        grid-row: 1/-1;
+
+        .design__heading {
+          margin-top: 17.0625rem;
+        }
+      }
+
+      &--app {
+        background-image: url(./assets/home/desktop/image-app-design.jpg);
+      }
+
+      &--web {
+        background-image: url(./assets/home/desktop/image-web-design-small.jpg);
+      }
+
+      &--large {
+        background-image: url(./assets/home/desktop/image-web-design-large.jpg);
+      }
+
+      &--graphic {
+        background-image: url(./assets/home/desktop/image-graphic-design.jpg);
+      }
+    }
+
+    &__heading {
+      margin-top: 6.6875rem;
+    }
+  }
 }
 
 // Section qualities
 .qualities {
-  padding-bottom: 19.4375rem;
 
   &__wrapper {
     display: flex;
@@ -657,7 +870,6 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 768px) {
-    padding-bottom: 20.6875rem;
 
     &__wrapper {
       flex-direction: row;
@@ -688,6 +900,43 @@ $gradient-location: #5D0202;
 
     &__icon {
       margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+      width: 350px;
+      flex-direction: column;
+      text-align: center;
+
+      &:nth-of-type(2) {
+        margin-block: unset;
+      }
+    }
+
+    &__context {
+      padding-left: 0;
+      max-width: unset;
+      margin-inline: unset;
+
+      &::before {
+        top: 0;
+        bottom: unset;
+        right: 0;
+        margin-inline: auto;
+        margin-block: unset;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 2rem;
+    }
+
+    &__icon {
+      margin-bottom: 3rem;
     }
   }
 }
@@ -736,6 +985,24 @@ $gradient-location: #5D0202;
 
     &__text {
       max-width: 450px;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    height: 292px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-position: 100% 50%;
+    padding: 0 6rem;
+
+    &__context {
+      text-align: left;
+    }
+    
+    &__heading,
+    &__text {
+      margin-inline: unset;
     }
   }
 }
@@ -817,18 +1084,38 @@ $gradient-location: #5D0202;
       border-top-right-radius: 0.9375rem;
     }
   }
+
+  @media(min-width: 1440px) {
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 1.875rem;
+    margin-block: 10rem;
+ 
+    &__card {
+      flex-direction: column;
+      height: 478px;
+    }
+
+    &__context {
+      padding: 2rem;
+      border-bottom-left-radius: 0.9375rem;
+      border-top-right-radius: unset;
+    }
+  }
 }
 
 // Section about
 .about {
-  display: flex;
-  flex-direction: column;
-  background-color: #FDF3F0;
-  background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
-  background-position: left 320px;
-  background-repeat: no-repeat;
-  text-align: center;
-
+  &,
+  &--secondary {
+    display: flex;
+    flex-direction: column;
+    background-color: #FDF3F0;
+    background-image: url(./assets/shared/desktop/bg-pattern-three-circles.svg);
+    background-position: left 0 top 320px;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  
   &__context,
   &__context--secondary {
     width: min(100% - 3rem, 327px);
@@ -859,9 +1146,12 @@ $gradient-location: #5D0202;
   }
 
   @media(min-width: 768px) {
-    background-position: 94px 120px;
-    border-radius: 0.9375rem;
-
+    &,
+    &--secondary {
+      background-position: bottom 44px right 0;
+      border-radius: 0.9375rem;
+    }
+    
     &__context,
     &__context--secondary {
       width: 572px;
@@ -880,11 +1170,45 @@ $gradient-location: #5D0202;
       line-height: 3rem;
     }
   }
+
+  @media(min-width: 1440px) {
+    &,
+    &--secondary {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    & {
+      background-position: bottom 0 right 197px ;
+    }
+    
+    &--secondary {
+      background-position: bottom 0 left 0;
+    }
+    
+    &__context,
+    &__context--secondary {
+      text-align: left;
+      width: 635px;
+    }
+
+    &__context {
+      padding: 0 0 0 5.875rem;
+    }
+
+    &__context--secondary {
+      order: -1;
+      padding: 0 5.875rem 0;
+    }
+
+    &__text {
+      max-width: 445px;
+    }
+  }
 }
 
 // Section location
 .location {
-  background-color: $white;
   padding: 7.5rem 0;
   text-align: center;
 
@@ -959,6 +1283,16 @@ $gradient-location: #5D0202;
       margin-block: 5rem
     }
   }
+
+  @media(min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 0;
+
+    &__wrapper--australia {
+      margin-block: unset;
+    }
+  }
 }
 
 // Section map
@@ -1019,6 +1353,25 @@ $gradient-location: #5D0202;
 
     &__text:nth-of-type(1) {
       margin-bottom: 0; 
+    }
+  }
+
+  @media(min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 326px;
+
+    &--australia {
+      margin-block: 2rem;
+    } 
+
+    &__context {
+      width: 730px;
+
+      &--canada,
+      &--uk {
+        order: -1;
+      }
     }
   }
 }
@@ -1129,6 +1482,7 @@ $gradient-location: #5D0202;
       grid-template-rows: repeat(3, auto);
 
       &--icons {
+        justify-self: flex-end;
         align-self: flex-end;
         grid-column: 3;
         grid-row: 3;
@@ -1170,21 +1524,6 @@ $gradient-location: #5D0202;
 
       &:nth-of-type(2) {
         grid-column: 2;
-      }
-    }
-
-    &__icon {
-      margin-right: 1rem;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-
-      &:hover,
-      &:focus {
-        .footer__icon-fill {
-          fill: $light-peach;
-        }
       }
     }
   }
@@ -1275,8 +1614,10 @@ $gradient-location: #5D0202;
 .image {
   max-width: 100%;
   object-fit: cover;
+  vertical-align: middle;
   
   &--hero {
+    max-width: 80%;
     position: absolute;
     bottom: -200px;
     left: 0;
@@ -1317,6 +1658,46 @@ $gradient-location: #5D0202;
       height: 326px;
       border-radius: 0.9375rem;
       margin-bottom: 1.5rem;
+    }
+  }
+
+  @media(min-width: 1440px) {
+    &--hero {
+      position: absolute;
+      bottom: -72px;
+      left: unset;
+      right: 96px;
+      margin-inline: unset;
+    }
+
+    &--about {
+      &-banner {
+      height: 100%;
+      border-bottom-right-radius: 0.9375rem;
+      border-top-left-radius: unset;
+      }
+      
+
+      &-world {
+        height: 640px;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 0.9375rem;
+      }
+
+      &-real {
+        height: 640px;
+        border-top-left-radius: unset;
+        border-bottom-right-radius: 0.9375rem;
+      }
+    }
+
+    &--projects {
+      border-bottom-left-radius: unset;
+      border-top-right-radius: 0.9375rem;
+    }
+
+    &--map {
+      width: 350px;
     }
   }
 } 

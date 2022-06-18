@@ -16,6 +16,7 @@ export default function DesignCard(props) {
         "design__card": true,
         "design__card--app": props.app,
         "design__card--web": props.web,
+        "design__card--large": props.large,
         "design__card--graphic": props.graphic
       })}
       onClick={handleLinkClick}
