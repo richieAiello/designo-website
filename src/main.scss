@@ -350,7 +350,7 @@ $gradient-location: #5D0202;
       url(./assets/home/desktop/image-hero-phone.png);
     background-position: 
       left 0 top 102px,
-      center bottom -365px;
+      left 50% bottom -365px;
     height: 843px;
   }
 
@@ -424,7 +424,7 @@ $gradient-location: #5D0202;
     &--home {
       background-position: 
         left 170.55px top 101.5px,
-        center bottom -365px;
+        left 50% bottom -365px;
     }
   
     &--design {
