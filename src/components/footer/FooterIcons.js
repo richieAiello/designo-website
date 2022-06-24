@@ -83,11 +83,11 @@ const instagram =
 export default function FooterIcons() {
   return (
     <div className="footer__wrapper--icons">
-      <a href="#" className="footer__icon">{facebook}</a>
-      <a href="#" className="footer__icon">{youtube}</a>
-      <a href="#" className="footer__icon">{twitter}</a>
-      <a href="#" className="footer__icon">{pinterest}</a>
-      <a href="#" className="footer__icon">{instagram}</a>
+      <a href="#" className="footer__icon" aria-label="Visit the designo facebook.">{facebook}</a>
+      <a href="#" className="footer__icon" aria-label="Visit the designo youtube.">{youtube}</a>
+      <a href="#" className="footer__icon" aria-label="Visit the designo twitter.">{twitter}</a>
+      <a href="#" className="footer__icon" aria-label="Visit the designo pinterest.">{pinterest}</a>
+      <a href="#" className="footer__icon" aria-label="Visit the designo instagram.">{instagram}</a>
     </div>
   );
 }
