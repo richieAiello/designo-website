@@ -12,29 +12,31 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Designo Website Live URL](https://designo-website-richieaiello.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- BEM Naming Convention
+- SCSS
 - Mobile-first workflow
+- [Parcel](https://parceljs.org/) - Build Tool
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [React Router v6](https://reactrouter.com/) - Client side routing tool
+- [clsx](https://www.npmjs.com/package/clsx) - Utility for constructing conditional className strings
+- [Formik](https://formik.org/) - React form library
+- [Yup](https://www.npmjs.com/package/yup) - JS schema builder
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [React tutorial by Jad Joubran](https://react-tutorial.app/)
+- [React Router v6 Docs](https://reactrouter.com/docs/en/v6)
+- [Formik Docs](https://formik.org/docs/overview)
+- [stack overflow question](https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router) - 
+Allowing react routes to refresh properly without providing a 404 page.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-
+- Frontend Mentor - [@richieAiello](https://www.frontendmentor.io/profile/richieAiello)
