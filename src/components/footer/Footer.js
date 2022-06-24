@@ -31,9 +31,9 @@ export default function Footer(props) {
         <address className="footer__address">
           <span className="bold">Contact Us (Central Office)</span>
           <br />
-          P : <span aria-label="Company phone number.">+1 253-863-8967</span>
+          P : +1 253-863-8967
           <br />
-          M : <span aria-label="Company email.">contact@designo.co</span>
+          M : contact@designo.co
         </address>
         <FooterIcons />
       </div>
