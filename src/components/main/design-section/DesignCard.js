@@ -21,7 +21,7 @@ export default function DesignCard(props) {
       })}
       onClick={handleLinkClick}
       tabIndex={0}
-      aria-label="Click to view projects."
+      // aria-label="Click to view projects."
     >
       <div className="design__context">
         <h2 className="design__heading bold">
