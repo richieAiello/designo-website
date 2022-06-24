@@ -1,7 +1,6 @@
 import Hero from "../components/hero/Hero";
 import HeroWrapper from "../components/hero/HeroWrapper";
 import HeroBtn from "../components/hero/HeroBtn";
-import HeroImage from "../components/hero/HeroImage";
 import DesignCard from "../components/main/design-section/DesignCard";
 import Quality from "../components/main/qualities-section/Quality";
 import YourProject from "../components/main/your-project-section/YourProject";
@@ -25,7 +24,6 @@ export default function Home() {
           >
             <HeroBtn />
           </HeroWrapper>
-          <HeroImage />
         </Hero>
         <section className="design design--home container">
           <DesignCard web={true} large={true} />
