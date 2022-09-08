@@ -8,7 +8,7 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Socials](#socials)
 
 ## Links
 
@@ -37,6 +37,6 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 - [stack overflow question](https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router) - 
 Allowing react routes to refresh properly without providing a 404 page.
 
-## Author
+## Socials
 
 - Frontend Mentor - [@richieAiello](https://www.frontendmentor.io/profile/richieAiello)
