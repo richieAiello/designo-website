@@ -10,12 +10,21 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 
 - [React.js](https://reactjs.org/)
 - [React Router v6](https://reactrouter.com/)
-- [SCSS](https://tailwindcss.com/) 
+- [SCSS](https://tailwindcss.com/)
+- [BEM](https://css-tricks.com/bem-101/)
 - [Parcel](https://vitejs.dev/)
 - [clsx](https://www.npmjs.com/package/clsx)
 - [Formik](https://formik.org/)
 - [yup](https://www.npmjs.com/package/yup)
 - [yup-phone](https://www.npmjs.com/package/yup-phone)
+
+## Favorite Resources
+
+- []()
+- []()
+- []()
+- []()
+- []()
 
 ## Socials
 
