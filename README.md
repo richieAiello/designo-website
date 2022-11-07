@@ -18,14 +18,6 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 - [yup](https://www.npmjs.com/package/yup)
 - [yup-phone](https://www.npmjs.com/package/yup-phone)
 
-## Favorite Resources
-
-- []()
-- []()
-- []()
-- []()
-- []()
-
 ## Socials
 
 - Frontend Mentor - [@richieAiello](https://www.frontendmentor.io/profile/richieAiello)
